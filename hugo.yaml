@@ -1,5 +1,5 @@
-baseURL: https://www.docsy.dev/
-title: Docsy
+baseURL: https://example.docsy.dev # CUSTOMIZE
+title: Docsy Starter # CUSTOMIZE
 enableRobotsTXT: true
 enableGitInfo: true
 theme: [docsy]
@@ -31,7 +31,7 @@ languages:
   en:
     languageName: English
     params:
-      description: Docsy does docs
+      description: Docsy starter # CUSTOMIZE
 
 markup:
   goldmark:
@@ -46,10 +46,10 @@ markup:
 params:
   copyright:
     authors: >-
-      Docsy Authors |
+      Project Authors |
       [CC BY 4.0](https://creativecommons.org/licenses/by/4.0) |
-    from_year: 2018
-  privacy_policy: https://policies.google.com/privacy
+    # from_year: 2024
+  privacy_policy: https://www.linuxfoundation.org/legal/privacy-policy
   version_menu: Releases
   archived_version: false
   version: 0.10.0

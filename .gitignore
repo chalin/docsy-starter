@@ -7,7 +7,7 @@
 node_modules/
 package-lock.json
 
-# Link checker
+# Local scratch folder
 tmp/
 
 # macOS
@@ -18,14 +18,5 @@ scripts/collector.yaml
 assets/jsconfig.json
 /.netlify
 
-# IntelliJ
-*.iml
-
 # VS Code
-/.vscode/**
-
-# Webstorm
-/.idea/**
-
-.dart_tool
-pubspec.lock
+/.vscode
