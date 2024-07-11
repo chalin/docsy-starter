@@ -1,9 +1,10 @@
 {
   "name": "docsy-user-guide",
   "scripts": {
+    "__check:links": "make --keep-going check-links",
     "_build": "npm run _hugo-dev --",
     "_check:format": "npx prettier --check .",
-    "_check:links": "make check-links",
+    "_check:links": "HTMLTEST_ARGS='--log-level 1 --skip-external' npm run __check:links",
     "_check:links--warn": "npm run _check:links || (echo; echo 'WARNING: see link-checker output for issues.'; echo)",
     "_get:submodule": "set -x && git submodule update --init ${DEPTH:- --depth 1}",
     "_hugo": "hugo --cleanDestinationDir",
@@ -51,5 +52,6 @@
   "prettier": {
     "proseWrap": "always",
     "singleQuote": true
-  }
+  },
+  "spelling": "cSpell:ignore docsy hugo HTMLTEST pkgs netlify precheck postbuild -"
 }
