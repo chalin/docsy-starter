@@ -1,13 +1,20 @@
 ---
-title: Docsy
-description: A Hugo theme for creating great technical documentation sites
+title: Docsy starter
+description: A website starter kit for technical documentation
+outputs:
+  - HTML
+  - REDIRECTS # Include this `content/en` ONLY
+developer_note:
+  The blocks/cover shortcode (used below) will use as a background image any
+  image file containing "background" in its name.
+show_banner: true
 ---
 
-{{% blocks/cover title="Welcome to Docsy!" image_anchor="top" height="full" %}}
+{{% blocks/cover title="Docsy Starter" image_anchor="top" height="full" %}}
 {{% param description %}}
 {.display-6}
 
-<a class="btn btn-lg btn-primary me-3" href="about/">Learn More</a>
+<a class="btn btn-lg btn-primary me-3" href="docs/">Learn More</a>
 <a class="btn btn-lg btn-secondary" href="docs/get-started/">Get started</a>
 {.p-initial .my-5}
 

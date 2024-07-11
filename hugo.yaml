@@ -1,47 +1,66 @@
-baseURL: https://example.docsy.dev # CUSTOMIZE
-title: Docsy Starter # CUSTOMIZE
-enableRobotsTXT: true
-enableGitInfo: true
-theme: [docsy]
+# cSpell:ignore docsy github goldmark linkify netlify
 
-pygmentsCodeFences: true
-pygmentsUseClasses: false
-pygmentsUseClassic: false
-pygmentsStyle: tango
+baseURL: https://main--cncf-docsy-starter.netlify.app # CUSTOMIZE
+title: Docsy Starter # CUSTOMIZE
+disableKinds: [taxonomy]
+theme: [docsy]
+enableGitInfo: true
+
+#
+# Outputs and Netlify _redirects file support
+#
+
+disableAliases: true # We do redirects via Netlify's _redirects file
+
+mediaTypes:
+  text/netlify: {}
+
+outputFormats:
+  REDIRECTS:
+    mediaType: text/netlify
+    baseName: _redirects
+    notAlternative: true
 
 outputs:
   home: [HTML]
-  page: [HTML]
-  section: [HTML, RSS, print]
+  section: [HTML]
 
-imaging:
-  resampleFilter: CatmullRom
-  quality: 75
-  anchor: smart
+#
+# Language settings
+#
 
-menu:
-  main:
-    - name: Example Site
-      weight: 40
-      url: https://example.docsy.dev
-      post: <sup><i class="ps-1 fa-solid fa-up-right-from-square fa-xs"
-        aria-hidden="true"></i></sup>
+enableMissingTranslationPlaceholders: true
+defaultContentLanguage: en
 
 languages:
   en:
     languageName: English
+    languageCode: en-US
     params:
       description: Docsy starter # CUSTOMIZE
 
+#
+# Markup and imaging
+#
+
 markup:
   goldmark:
+    extensions:
+      linkify: false
     parser:
       attribute:
         block: true
+      wrapStandAloneImageWithinParagraph: false
     renderer:
       unsafe: true
   highlight:
     noClasses: false # Required for dark-mode
+  tableOfContents: { endLevel: 4 }
+
+imaging:
+  resampleFilter: CatmullRom # cspell:disable-line
+  quality: 75
+  anchor: smart
 
 params:
   copyright:
@@ -49,32 +68,17 @@ params:
       Project Authors |
       [CC BY 4.0](https://creativecommons.org/licenses/by/4.0) |
     # from_year: 2024
+  github_repo: https://github.com/chalin/docsy-starter
+  gcs_engine_id: 011217106833237091527:la2vtv2emlw # CUSTOMIZE # FIXME get an ID for the starter?
   privacy_policy: https://www.linuxfoundation.org/legal/privacy-policy
-  version_menu: Releases
-  archived_version: false
-  version: 0.10.0
-  url_latest_version: https://example.com
-  github_repo: https://github.com/google/docsy
-  github_project_repo: https://github.com/google/docsy
-  github_subdir: userguide
-  time_format_blog: Monday, January 02, 2006
-  time_format_default: January 2, 2006
-  rss_sections: [blog] # TODO: drop since this is the default
-  gcs_engine_id: 011217106833237091527:la2vtv2emlw
-  offlineSearch: false
-  offlineSearchSummaryLength: 70
-  offlineSearchMaxResults: 10
-  prism_syntax_highlighting: false
-  search:
-    # algolia:
   ui:
     showLightDarkModeMenu: true
     sidebar_cache_limit: 10
     sidebar_menu_compact: true
     sidebar_menu_foldable: false
     sidebar_search_disable: false
-    feedback:
-      enable: true
+    feedback: # CUSTOMIZE
+      enable: false # FIXME: setting to false until the feedback can be better configured
       'yes': >-
         Glad to hear it! Please <a
         href="https://github.com/google/docsy/issues/new">tell us how we can
@@ -83,8 +87,6 @@ params:
         Sorry to hear that. Please <a
         href="https://github.com/google/docsy/issues/new">tell us how we can
         improve</a>.
-    readingtime:
-      enable: false
   links: # CUSTOMIZE
     user:
       - name: GitHub Discussions
@@ -108,22 +110,6 @@ params:
         url: https://github.com/google/docsy
         icon: fa-brands fa-github
         desc: Development takes place here!
-
-  plantuml:
-    enable: true
-    theme: default
-    svg_image_url: https://www.plantuml.com/plantuml/svg/
-    svg: false
-  print:
-    disable_toc: false
-  markmap:
-    enable: true
-  drawio:
-    enable: true
-
-taxonomies:
-  tag: tags
-  category: categories
 
 module:
   mounts:
