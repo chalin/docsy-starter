@@ -85,7 +85,7 @@ params:
         improve</a>.
     readingtime:
       enable: false
-  links:
+  links: # CUSTOMIZE
     user:
       - name: GitHub Discussions
         url: https://github.com/google/docsy/discussions
