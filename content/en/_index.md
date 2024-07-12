@@ -1,6 +1,6 @@
 ---
 title: Docsy starter
-description: A website starter kit for technical documentation
+description: A website starter for technical documentation
 outputs:
   - HTML
   - REDIRECTS # Include this `content/en` ONLY
