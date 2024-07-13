@@ -1,9 +1,9 @@
 ---
 title: Docsy
-description: A Hugo theme for creating great technical documentation sites
+description: A framework for securing software update systems
 ---
 
-{{% blocks/cover title="Welcome to Docsy!" image_anchor="top" height="full" %}}
+{{% blocks/cover title="The Update Framework" image_anchor="top" height="full" %}}
 {{% param description %}}
 {.display-6}
 
@@ -12,33 +12,61 @@ description: A Hugo theme for creating great technical documentation sites
 {.p-initial .my-5}
 
 {{% blocks/link-down color="info" %}}
-{{% /blocks/cover %}}
+{{% /blocks/cover%}}
 
 {{% blocks/lead color="primary" %}}
-Docsy is a theme for the Hugo static site generator that's specifically designed
-for technical documentation sets. Our aim is to help you get a working
-documentation site up and running as easily as possible, so you can concentrate
-on creating great content for your users.
 
-<a href="https://www.netlify.com" target="_blank" rel="noopener">
-  <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Deploys by Netlify" />
-</a>
+## What is TUF?
+
+
+The Update Framework (TUF) helps developers maintain the security of software update systems, providing protection even against attackers that compromise the repository or signing keys. TUF provides a flexible framework and [specification](https://theupdateframework.github.io/specification/latest/) that developers can adopt into any software update system.
+
+TUF is hosted by the [Linux Foundation](https://www.linuxfoundation.org/) as part of the [Cloud Native Computing Foundation](https://www.cncf.io) (CNCF) and is [used in production](/adoptions) by various tech companies and open source organizations. A variant of TUF called [Uptane](https://uptane.github.io/) is widely used to secure over-the-air updates in automobiles.
+
+
 {{% /blocks/lead %}}
 
 {{% blocks/section color="dark" type="row" %}}
 
-{{% blocks/feature icon="fa-lightbulb" title="See Docsy in action!" url="/docs/examples/" %}}
-As well as our example site, there's a growing number of projects using Docsy for their doc sites.
+{{% blocks/feature icon="fa-lightbulb" title="Our work"%}}
+
+This material is based upon work supported by the National Science Foundation under Grant Nos. CNS-1345049 and CNS-0959138. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
+
+
 {{% /blocks/feature %}}
 
 
-{{% blocks/feature icon="fa-brands fa-github" title="Contributions welcome!" url="https://github.com/google/docsy" %}}
-We do a [Pull Request](https://github.com/google/docsy/pulls) contributions workflow on **GitHub**. New users are always welcome!
+{{% blocks/feature icon="fa-brands fa-github" title="Contribute" url="https://github.com/theupdateframework" %}}
+To contribute to The Update Framework, create a Pull request on any of our [GitHub Repositories](https://github.com/theupdateframework)
 {{% /blocks/feature %}}
 
 
-{{% blocks/feature icon="fa-brands fa-x-twitter" title="Follow us on Twitter!" url="https://twitter.com/docsydocs" %}}
-Find out about new features and how our users are using Docsy.
+{{% blocks/feature icon="fa-brands fa-x-twitter" title="Contact Us" %}}
+Please contact us via our [mailing
+list](https://groups.google.com/forum/?fromgroups#!forum/theupdateframework).
+
+Questions, feedback, and suggestions are welcomed on this low volume mailing
+list or the [#tuf](https://cloud-native.slack.com/archives/C8NMD3QJ3) channel
+on [CNCF Slack](https://slack.cncf.io/).  We strive to make the specification
+easy to implement, so if you come across any inconsistencies or experience any
+difficulty, do let us know by sending an email, or by reporting an issue in
+the [specification
+ repo](https://github.com/theupdateframework/specification/issues).
 {{% /blocks/feature %}}
+
+{{% /blocks/section %}}
+
+
+
+{{% blocks/section color="secondary" type="cncf" %}}
+
+**OpenTelemetry is a [CNCF][] [incubating][] project**.<br> Formed through a
+merger of the OpenTracing and OpenCensus projects.
+
+[![CNCF logo][]][cncf]
+
+[cncf]: https://cncf.io
+[cncf logo]: /img/logos/cncf-white.svg
+[incubating]: https://www.cncf.io/projects/
 
 {{% /blocks/section %}}
