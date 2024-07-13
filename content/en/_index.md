@@ -7,7 +7,7 @@ description: A framework for securing software update systems
 {{% param description %}}
 {.display-6}
 
-<a class="btn btn-lg btn-primary me-3" href="about/">Learn More</a>
+<a class="btn btn-lg btn-primary me-3" href="docs/">Learn More</a>
 <a class="btn btn-lg btn-secondary" href="docs/get-started/">Get started</a>
 {.p-initial .my-5}
 
