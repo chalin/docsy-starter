@@ -25,14 +25,14 @@ TUF was launched almost a decade ago as a way to build system resilience against
 key compromises and other attacks that can spread malware or compromise a repository.
 The primary goals behind its design are:
 
-* to provide a framework (a set of libraries, file formats, and utilities)
+* To provide a framework (a set of libraries, file formats, and utilities)
 that can be used to secure new and existing software update systems.
 
-* to provide the means to minimize the impact of key compromises.
+* To provide the means to minimize the impact of key compromises.
 
-* to be flexible enough to meet the needs of a wide variety of software update systems.
+* To be flexible enough to meet the needs of a wide variety of software update systems.
 
-* to be easy to integrate with existing software update systems.
+* To be easy to integrate with existing software update systems.
 
 ### Software Updates 101 ###
 A software update system is an application (or part of an
