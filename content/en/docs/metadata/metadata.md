@@ -2,7 +2,7 @@
 title: Metadata
 weight: 100
 # aliases: [/docs/metadata/metadata]
-description: Learn about metadata
+description: 
 ---
 
 TUF uses roles to define the set of actions a party can perform. The concept of

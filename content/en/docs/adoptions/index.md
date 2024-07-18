@@ -2,7 +2,7 @@
 title: Adoptions
 weight: 100
 # aliases: [/docs/adoptions/index]
-description: See examples of our adopters.
+description:
 ---
 
 

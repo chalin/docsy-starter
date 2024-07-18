@@ -2,7 +2,7 @@
 title: Project
 weight: 100
 # aliases: [/docs/project/project]
-description: Learn about the TUF project structure
+description: 
 ---
 
 The TUF project consists of three components:
