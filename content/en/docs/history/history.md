@@ -1,8 +1,8 @@
 ---
-title: History and Core principles
+title: History 
 weight: 100
 # aliases: [/docs/history/history]
-description: Learn about TUF origins.
+description: History and Core principles
 ---
 
 The basic technology behind TUF was developed at the University of Washington
