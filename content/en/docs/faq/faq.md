@@ -1,6 +1,6 @@
 ---
 title: FAQ
-weight: 100
+weight: 35
 # aliases: [/docs/faq/faq]
 description: Frequently Asked Questions
 ---

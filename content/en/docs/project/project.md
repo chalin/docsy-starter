@@ -1,6 +1,6 @@
 ---
 title: Project
-weight: 100
+weight: 15
 # aliases: [/docs/project/project]
 description: 
 ---

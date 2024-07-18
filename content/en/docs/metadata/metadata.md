@@ -1,6 +1,6 @@
 ---
 title: Metadata
-weight: 100
+weight: 20
 # aliases: [/docs/metadata/metadata]
 description: 
 ---

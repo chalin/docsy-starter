@@ -1,6 +1,6 @@
 ---
 title: History 
-weight: 100
+weight: 25
 # aliases: [/docs/history/history]
 description: History and Core principles
 ---
