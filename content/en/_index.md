@@ -64,10 +64,6 @@ the [specification
 [incubating]: https://www.cncf.io/projects/
 
 
-
-
-
-
 {{% /blocks/lead %}}
 
 

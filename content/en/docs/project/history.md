@@ -1,13 +1,11 @@
 ---
-title: History 
-weight: 25
-# aliases: [/docs/history/history]
-description: History and Core principles
+title: History
+weight: 16
 ---
 
 The basic technology behind TUF was developed at the University of Washington
 in 2009 by Justin Samuel and Justin Cappos, and presented
-in a [paper](https://theupdateframework.github.io/papers/survivable-key-compromise-ccs2010.pdf?raw=true) 
+in a [paper](https://theupdateframework.github.io/papers/survivable-key-compromise-ccs2010.pdf?raw=true)
 Samuel and Cappos coauthored with Nick Mathewson and Roger
 Dingledine, researchers from [The Tor Project,
 Inc](https://www.torproject.org/).  Since 2011, TUF has been based at [New York
@@ -34,10 +32,4 @@ hackers can not sign metadata to authenticate malware.
 
 * Lastly, TUF keeps the most vulnerable signing keys offline, which greatly
 reduces the risk that they can be stolen or compromised.
-
 In 2016, the TUF research group set up a process whereby the community could
-have input on technical issues. Named the TUF Augmentation Proposal, or TAP,
-this series of documents also provide information to the TUF community, or
-describe new feature for TUF or its processes or environment. Through the use
-of TAPs, as well as input from those who adopted the technology, the evolution
-of TUF technology can continue as security needs change.
