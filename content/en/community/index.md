@@ -37,11 +37,11 @@ Learn more about TUF and connect with other users through the following channels
 
 - <i class="fa-solid fa-envelope mr-1 p-2 fa-xl" style="color: blue"></i>[Mailing list](https://groups.google.com/g/theupdateframework?pli=1) : Sign up on our mailing list for updates and announcements.
 
-- <i class="fa-regular fa-calendar-days mr-1 p-2 fa-xl" style="color: blue"></i>[Calendar](https://www.cncf.io/calendar) : See our meeting calendar
+- <i class="fa-regular fa-calendar-days mr-1 p-2 fa-xl" style="color: blue"></i>[Calendar](https://www.cncf.io/calendar) : View our Meeting Calendar
 
 - <i class="fa-solid fa-list fa-xl mr-1 p-2" style="color: blue"></i>[Meeting Agenda](https://hackmd.io/jdAk9rmPSpOYUdstbIvbjw) : See our Meeting Agenda
 
-- <i class="fa-solid fa-location-dot fa-xl mr-1 p-2" style="color: blue"></i>[Meeting link](https://meet.google.com/jhk-cvuf-icd) : Join our community meetings
+- <i class="fa-solid fa-location-dot fa-xl mr-1 p-2" style="color: blue"></i>[Meeting link](https://meet.google.com/jhk-cvuf-icd) : Join our Community meetings
 
 - <i class="fa-brands fa-slack fa-xl mr-1 p-2" style="color: blue"></i>[Slack Channel](https://communityinviter.com/apps/cloud-native/cncf) : Connect with us on the CNCF slack channel under the #tuf
 
