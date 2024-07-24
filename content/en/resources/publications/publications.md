@@ -1,8 +1,14 @@
 ---
-title: Hello, web!
-date: 2024-07-11
-description: Welcome to the CNCF Docsy starter
+title: Publications
+weight: 50
+description: Publications and press
+
 ---
+
+
+
+
+
 
 Welcome to the CNCF Docsy starter, an opinionated website starter for CNCF
 projects. This repo embodies years of best practices in site configuration,
