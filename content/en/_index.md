@@ -3,7 +3,7 @@ title: TUF
 description: A framework for securing software update systems
 ---
 
-{{% blocks/cover title="The Update Framework" image_anchor="top" height="full" %}}
+{{% blocks/cover title="The Update Framework"image_anchor="top" color="primary" height="max" %}}
 {{% param description %}}
 {.display-6}
 
