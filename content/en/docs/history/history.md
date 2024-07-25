@@ -1,6 +1,7 @@
 ---
 title: History
-weight: 17
+weight: 15
+description: Learn TUF history and core principles
 ---
 
 The basic technology behind TUF was developed at the University of Washington

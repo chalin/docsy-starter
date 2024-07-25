@@ -1,7 +1,7 @@
 
 ---
 title: Get started
-weight: 10
+weight: 30
 # aliases: [/docs/getting-started/]
 description: Get started with TUF based on your role.
 ---

@@ -1,6 +1,6 @@
 ---
 title: Adoptions
-weight: 30
+weight: 40
 # aliases: [/docs/adoptions/index]
 description:
 ---

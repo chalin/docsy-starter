@@ -1,8 +1,8 @@
 ---
 title: Project
-weight: 15
+weight: 25
 # aliases: [/docs/project]
-description:
+description: Learn more about the TUF project
 ---
 
 The TUF project consists of three components:

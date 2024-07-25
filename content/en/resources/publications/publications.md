@@ -1,6 +1,6 @@
 ---
 title: Publications
-weight: 50
+
 description: Publications and press
 
 ---

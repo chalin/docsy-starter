@@ -1,8 +1,8 @@
 ---
 title: Security
-weight: 23
+weight: 35
 # aliases: [/docs/security/security]
-description:
+description: Conduct security audits with TUF
 ---
 
 We can think of a software update system as "secure" if:

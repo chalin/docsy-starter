@@ -7,7 +7,6 @@ menu: {main: {weight: 40}}
 ---
 
 
-
 {{< blocks/cover color="blue" height="sm" >}}
 <h1>Welcome to TUF community!</h1>
 <h5>TUF is an open source project that anyone in the community can learn, use, and improve. We'd love you to join us!

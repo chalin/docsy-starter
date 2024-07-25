@@ -1,5 +1,7 @@
 ---
 title: Timeline
+weight: 20
+Description: See the project timeline
 ---
 
 **2010**: Improving upon the Thandy software updater for the Tor private
