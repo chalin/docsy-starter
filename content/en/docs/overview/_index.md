@@ -80,7 +80,7 @@ account, such as when:
 * An attacker compromises the key used to sign these files. Now you
   download a file that is properly signed, but is still malicious.
 
-The [Security](docs/security) section offers a full list of the
+The [Security](docs/overview/security) section offers a full list of the
 attacks and updater weaknesses that TUF is designed to defend against.
 
 ### How does TUF secure updates? ###
@@ -98,5 +98,5 @@ this additional metadata or understand what's going on underneath. TUF
 identifies the  updates, downloads them, and checks them
 against the metadata that it also downloads from the repository. If the
 downloaded target files are trustworthy, TUF hands them over to your software
-update system. See [metadata](docs/metadata) for more information and examples.
+update system. See [metadata](docs/overview/metadata) for more information and examples.
 

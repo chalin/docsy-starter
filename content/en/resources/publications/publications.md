@@ -5,11 +5,6 @@ description: Publications and press
 
 ---
 
-
-
-
-
-
 Welcome to the CNCF Docsy starter, an opinionated website starter for CNCF
 projects. This repo embodies years of best practices in site configuration,
 including Continuous Integration (CI) tooling, of existing CNCF websites built

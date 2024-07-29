@@ -4,7 +4,7 @@ weight: 100
 description: Get started with TUF as an adopter.
 ---
 
-TUF provides a framework for integration of the [security](docs/security)
+TUF provides a framework for integration of the [security](docs/overview/security)
 properties into new and existing content delivery systems.
 
 While some [adoptions](docs/adoptions) integrate TUF by implementing the framework

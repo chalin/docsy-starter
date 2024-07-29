@@ -144,7 +144,7 @@ description: Get your questions answered!
 
 **12. Has there been a security audit of TUF?**
 
-  The [Security Audits](docs/security) page links to a few of the security audits of
+  The [Security Audits](docs/overview/security) page links to a few of the security audits of
   TUF.
 
 **13. How can I try TUF?**
