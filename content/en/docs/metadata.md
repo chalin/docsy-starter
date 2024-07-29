@@ -1,7 +1,7 @@
 ---
-title: Metadata
+title: Roles and Metadata
+LinkTitle: Metadata
 weight: 15
-
 description: Understand Roles and Metadata
 ---
 

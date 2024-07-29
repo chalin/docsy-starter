@@ -1,6 +1,6 @@
 ---
 title: Timeline
-weight: 20
+weight: 19
 Description: See the project timeline
 ---
 

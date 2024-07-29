@@ -1,7 +1,6 @@
 ---
 title: Security
 weight: 35
-# aliases: [/docs/security/security]
 description: Conduct security audits with TUF
 ---
 

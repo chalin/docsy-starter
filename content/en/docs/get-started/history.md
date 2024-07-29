@@ -1,6 +1,6 @@
 ---
 title: History
-weight: 15
+weight: 18
 description: Learn TUF history and core principles
 ---
 

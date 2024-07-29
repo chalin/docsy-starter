@@ -1,7 +1,6 @@
 ---
 title: Adoptions
 weight: 40
-# aliases: [/docs/adoptions/index]
 description: Explore practical adoptions of TUF
 ---
 

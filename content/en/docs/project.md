@@ -1,7 +1,7 @@
 ---
 title: Project
-weight: 25
-# aliases: [/docs/project]
+LinkTitle: Project
+weight: 20
 description: Learn more about the TUF project
 ---
 

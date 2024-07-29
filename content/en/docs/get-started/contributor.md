@@ -1,7 +1,6 @@
 ---
 title: Contributor
-weight: 100
-# aliases: [/docs/getting-started/contributor]
+weight: 17
 description: Learn how to contribute to TUF
 ---
 

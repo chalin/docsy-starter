@@ -2,6 +2,7 @@
 title: Frequently Asked Questions
 LinkTitle: FAQ
 weight: 45
+description: Get your questions answered!
 ---
 
 
