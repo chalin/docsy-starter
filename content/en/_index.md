@@ -56,7 +56,7 @@ the [specification
 {{% blocks/lead color="primary" %}}
 
 
-**TUF** is a [Cloud Native Computing Foundation](https://www.cncf.io) (CNCF) Graduated project and is [used in production](/adoptions) by various tech companies and open source organizations. A variant of TUF called [Uptane](https://uptane.github.io/) is widely used to secure over-the-air updates in automobiles
+**TUF** is a [Cloud Native Computing Foundation](https://www.cncf.io) (CNCF) Graduated project and is [used in production](docs/adoptions) by various tech companies and open source organizations. A variant of TUF called [Uptane](https://uptane.github.io/) is widely used to secure over-the-air updates in automobiles
 
 [![CNCF logo][]][cncf]
 

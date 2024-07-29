@@ -75,7 +75,7 @@ most software update systems that use keysigning).
 To ensure systems are secure against all of the above attacks, the design and
 implementation of TUF relies on a few basic concepts.
 For details of how TUF conveys the information discussed below, see the
-[Metadata documentation](/metadata.html).
+[Metadata documentation](docs/metadata).
 
 ### Trust
 

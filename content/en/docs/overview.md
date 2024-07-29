@@ -1,8 +1,7 @@
 ---
 title: Overview
-LinkTitle: Overview
 weight: 10 
-description: 
+description: Find out what TUF is all about!
 ---
 
 
@@ -14,7 +13,7 @@ use today.
 What these systems have in common is they all identify,
 locate, and download updates for software that can add new functionalities or
 address old vulnerabilities. Software is rarely ever static, and some repositories
-receive updates on software or project metadata [every few minutes](/papers/protect-community-repositories-nsdi2016.pdf). 
+receive updates on software or project metadata [every few minutes](https://theupdateframework.io/papers/protect-community-repositories-nsdi2016.pdf). 
 
 This growing flow of updates has also created a need for better
 ways to protect the systems that manage them. Though a number of strategies have
@@ -81,7 +80,7 @@ account, such as when:
 * An attacker compromises the key used to sign these files. Now you
   download a file that is properly signed, but is still malicious.
 
-The [Security](/security.html) section offers a full list of the
+The [Security](docs/security) section offers a full list of the
 attacks and updater weaknesses that TUF is designed to defend against.
 
 ### How does TUF secure updates? ###
@@ -99,5 +98,5 @@ this additional metadata or understand what's going on underneath. TUF
 identifies the  updates, downloads them, and checks them
 against the metadata that it also downloads from the repository. If the
 downloaded target files are trustworthy, TUF hands them over to your software
-update system. See [metadata](/metadata.html) for more information and examples.
+update system. See [metadata](docs/metadata) for more information and examples.
 

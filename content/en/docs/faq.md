@@ -144,7 +144,7 @@ description: Get your questions answered!
 
 **12. Has there been a security audit of TUF?**
 
-  The [Security Audits](/audits) page links to a few of the security audits of
+  The [Security Audits](docs/security) page links to a few of the security audits of
   TUF.
 
 **13. How can I try TUF?**
@@ -158,6 +158,6 @@ description: Get your questions answered!
 
 **14. Is there a presentation or video about TUF?**
 
-  The [Videos](/videos) page contains links to presentations that have been
+  The [Videos]() page contains links to presentations that have been
   given by both TUF developer personnel, as well as adopters.
 
