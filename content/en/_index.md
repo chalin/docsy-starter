@@ -28,7 +28,7 @@ The Update Framework (TUF) maintains the security of software update systems, pr
 
 {{% blocks/feature icon="fa-lightbulb" title="Our work" url="docs/" %}}
 
-Explore How TUF works to secure Update systems
+Discover how TUF works to secure Update systems
 
 
 {{% /blocks/feature %}}
@@ -39,15 +39,11 @@ To contribute to The Update Framework, create a Pull request on our [GitHub Repo
 {{% /blocks/feature %}}
 
 
-{{% blocks/feature icon="fa-regular fa-envelope" title="Contact Us" %}}
-Please contact us via our [mailing
+{{% blocks/feature icon="fa-regular fa-envelope" title="Contact Us" url="/community" %}}
+Contact us via our [mailing
 list](https://groups.google.com/forum/?fromgroups#!forum/theupdateframework).
-Questions, feedback, and suggestions are welcomed on this low volume mailing
-list or the [#tuf](https://cloud-native.slack.com/archives/C8NMD3QJ3) channel
-on [CNCF Slack](https://slack.cncf.io/). If you come across any inconsistencies or experience any
-difficulty, do let us know by sending an email, or by reporting an issue in
-the [specification
- repo](https://github.com/theupdateframework/specification/issues).
+Questions, feedback, and suggestions are welcomed on our [#tuf](https://cloud-native.slack.com/archives/C8NMD3QJ3) channel
+on [CNCF Slack](https://slack.cncf.io/). 
 {{% /blocks/feature %}}
 
 {{% /blocks/section %}}
