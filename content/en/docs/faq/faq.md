@@ -1,5 +1,6 @@
 ---
-title: FAQ
+title: Frequently Asked Questions
+LinkTitle: FAQ
 weight: 45
 ---
 
