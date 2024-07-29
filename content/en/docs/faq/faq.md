@@ -1,7 +1,6 @@
 ---
 title: FAQ
 weight: 45
-description: Frequently Asked Questions
 ---
 
 
