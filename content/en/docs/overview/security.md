@@ -1,7 +1,7 @@
 ---
 title: Security
 weight: 35
-description: Conduct security audits with TUF
+description: Security properties of TUF repositories
 ---
 
 We can think of a software update system as "secure" if:
