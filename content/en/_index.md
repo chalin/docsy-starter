@@ -28,7 +28,7 @@ The Update Framework (TUF) maintains the security of software update systems, pr
 
 {{% blocks/feature icon="fa-lightbulb" title="Our work" url="docs/" %}}
 
-This material is based upon work supported by the National Science Foundation under Grant Nos. CNS-1345049 and CNS-0959138. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
+Explore How TUF works to secure Update systems
 
 
 {{% /blocks/feature %}}
@@ -39,7 +39,7 @@ To contribute to The Update Framework, create a Pull request on our [GitHub Repo
 {{% /blocks/feature %}}
 
 
-{{% blocks/feature icon="fa-brands fa-x-twitter" title="Contact Us" %}}
+{{% blocks/feature icon="fa-regular fa-envelope" title="Contact Us" %}}
 Please contact us via our [mailing
 list](https://groups.google.com/forum/?fromgroups#!forum/theupdateframework).
 Questions, feedback, and suggestions are welcomed on this low volume mailing
