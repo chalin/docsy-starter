@@ -1,16 +1,9 @@
 ---
-title: Docsy starter
-description: A website starter for technical documentation
-outputs:
-  - HTML
-  - REDIRECTS # Include this `content/en` ONLY
-developer_note:
-  The blocks/cover shortcode (used below) will use as a background image any
-  image file containing "background" in its name.
-show_banner: true
+title: TUF
+description: A framework for securing software update systems
 ---
 
-{{% blocks/cover title="Docsy Starter" image_anchor="top" height="full" %}}
+{{% blocks/cover title="The Update Framework" image_anchor="top" color="primary" height="max" %}}
 {{% param description %}}
 {.display-6}
 
@@ -19,33 +12,55 @@ show_banner: true
 {.p-initial .my-5}
 
 {{% blocks/link-down color="info" %}}
-{{% /blocks/cover %}}
+{{% /blocks/cover%}}
 
-{{% blocks/lead color="primary" %}}
-Docsy is a theme for the Hugo static site generator that's specifically designed
-for technical documentation sets. Our aim is to help you get a working
-documentation site up and running as easily as possible, so you can concentrate
-on creating great content for your users.
+{{% blocks/lead color="tertiary" %}}
 
-<a href="https://www.netlify.com" target="_blank" rel="noopener">
-  <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Deploys by Netlify" />
-</a>
+## What is TUF?
+
+
+The Update Framework (TUF) maintains the security of software update systems, providing protection even against attackers that compromise the repository or signing keys. TUF provides a flexible framework and [specification](https://theupdateframework.github.io/specification/latest/) that developers can adopt into any software update system.
+
+
 {{% /blocks/lead %}}
 
 {{% blocks/section color="dark" type="row" %}}
 
-{{% blocks/feature icon="fa-lightbulb" title="See Docsy in action!" url="/docs/examples/" %}}
-As well as our example site, there's a growing number of projects using Docsy for their doc sites.
+{{% blocks/feature icon="fa-lightbulb" title="Our work" url="docs/" %}}
+
+Discover how TUF works to secure Update systems
+
+
 {{% /blocks/feature %}}
 
 
-{{% blocks/feature icon="fa-brands fa-github" title="Contributions welcome!" url="https://github.com/google/docsy" %}}
-We do a [Pull Request](https://github.com/google/docsy/pulls) contributions workflow on **GitHub**. New users are always welcome!
+{{% blocks/feature icon="fa-brands fa-github" title="Contribute" url="https://github.com/theupdateframework" %}}
+To contribute to The Update Framework, create a Pull request on our [GitHub Repositories](https://github.com/theupdateframework)
 {{% /blocks/feature %}}
 
 
-{{% blocks/feature icon="fa-brands fa-x-twitter" title="Follow us on Twitter!" url="https://twitter.com/docsydocs" %}}
-Find out about new features and how our users are using Docsy.
+{{% blocks/feature icon="fa-regular fa-envelope" title="Contact Us" url="/community" %}}
+Contact us via our [mailing
+list](https://groups.google.com/forum/?fromgroups#!forum/theupdateframework).
+Questions, feedback, and suggestions are welcomed on our [#tuf](https://cloud-native.slack.com/archives/C8NMD3QJ3) channel
+on [CNCF Slack](https://slack.cncf.io/). 
 {{% /blocks/feature %}}
 
 {{% /blocks/section %}}
+
+
+{{% blocks/lead color="primary" %}}
+
+
+**TUF** is a [Cloud Native Computing Foundation](https://www.cncf.io) (CNCF) Graduated project and is [used in production](docs/adoptions) by various tech companies and open source organizations. A variant of TUF called [Uptane](https://uptane.github.io/) is widely used to secure over-the-air updates in automobiles
+
+[![CNCF logo][]][cncf]
+
+[cncf]: https://cncf.io
+[cncf logo]: static/img/cncf-white.svg
+[incubating]: https://www.cncf.io/projects/
+
+
+{{% /blocks/lead %}}
+
+

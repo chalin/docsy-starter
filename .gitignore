@@ -6,6 +6,7 @@
 # npm assets
 node_modules/
 package-lock.json
+yarn.lock
 
 # Local scratch folder
 tmp/
