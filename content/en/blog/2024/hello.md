@@ -10,5 +10,5 @@ including Continuous Integration (CI) tooling, of existing CNCF websites built
 using [Hugo], [Docsy], and deployed on [Netlify].
 
 [Docsy]: https://github.com/google/docsy
-[Hugo]:https://gohugo.io
+[Hugo]: https://gohugo.io
 [Netlify]: https://netlify.com

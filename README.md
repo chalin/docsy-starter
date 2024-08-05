@@ -11,5 +11,5 @@ For a preview, see [cncf-docsy-starter.netlify.app].
 
 [cncf-docsy-starter.netlify.app]: https://cncf-docsy-starter.netlify.app/
 [Docsy]: https://github.com/google/docsy
-[Hugo]:https://gohugo.io
+[Hugo]: https://gohugo.io
 [Netlify]: https://netlify.com
