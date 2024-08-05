@@ -65,8 +65,8 @@ imaging:
 params:
   copyright:
     authors: >-
-      Project Authors |
-      [CC BY 4.0](https://creativecommons.org/licenses/by/4.0) |
+      Project Authors | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0)
+      |
     # from_year: 2024
   github_repo: https://github.com/chalin/docsy-starter
   gcs_engine_id: 011217106833237091527:la2vtv2emlw # CUSTOMIZE # FIXME get an ID for the starter?
