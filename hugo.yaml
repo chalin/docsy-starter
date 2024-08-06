@@ -1,7 +1,7 @@
 # cSpell:ignore docsy github goldmark linkify netlify
 
 baseURL: https://cncf-docsy-starter.netlify.app/ # CUSTOMIZE
-title: Docsy Starter # CUSTOMIZE
+title: # CUSTOMIZE
 disableKinds: [taxonomy]
 theme: [docsy]
 enableGitInfo: true
@@ -37,7 +37,7 @@ languages:
     languageName: English
     languageCode: en-US
     params:
-      description: Docsy starter # CUSTOMIZE
+      description: TUF # CUSTOMIZE
 
 #
 # Markup and imaging
