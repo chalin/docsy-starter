@@ -1,6 +1,6 @@
 # cSpell:ignore docsy github goldmark linkify netlify
 
-baseURL: https://cncf-docsy-starter.netlify.app/ # CUSTOMIZE
+baseURL: https://theupdateframework.io/ # CUSTOMIZE
 title: TUF
 disableKinds: [taxonomy]
 theme: [docsy]
@@ -37,7 +37,7 @@ languages:
     languageName: English
     languageCode: en-US
     params:
-      description: TUF # CUSTOMIZE
+      description: A Framework for securing software update systems # CUSTOMIZE
 
 #
 # Markup and imaging
@@ -63,6 +63,7 @@ imaging:
   anchor: smart
 
 params:
+  
   copyright:
     authors: >-
       Project Authors | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0)
@@ -72,6 +73,8 @@ params:
   gcs_engine_id: 011217106833237091527:la2vtv2emlw # CUSTOMIZE # FIXME get an ID for the starter?
   privacy_policy: https://www.linuxfoundation.org/legal/privacy-policy
   ui:
+    logo: "static/icons/logo.svg"
+    navbar_logo: true
     showLightDarkModeMenu: true
     sidebar_cache_limit: 10
     sidebar_menu_compact: true
