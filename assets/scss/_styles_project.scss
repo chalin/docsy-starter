@@ -1,13 +1,31 @@
 @import 'td/code-dark';
 
-
 .td-navbar {
-    .navbar-brand {
-      svg {
-        height: 38px;
-      }
-      .navbar-brand__name {
-        display: none;
-      }
+  .navbar-brand {
+    svg {
+      height: 38px;
+    }
+    .navbar-brand__name {
+      display: none;
     }
   }
+}
+
+.td-home {
+  .cncf {
+    text-align: center;
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 0;
+    }
+
+    img {
+      width: 20rem;
+      padding-top: 1rem;
+      max-width: 80%;
+    }
+  }
+}
+
+$tuf-blue: #0082ca;
