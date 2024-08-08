@@ -37,7 +37,7 @@ languages:
     languageName: English
     languageCode: en-US
     params:
-      description: A Framework for securing software update systems # CUSTOMIZE
+      description: A Framework for securing software update systems
 
 #
 # Markup and imaging
