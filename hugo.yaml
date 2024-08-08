@@ -1,6 +1,6 @@
 # cSpell:ignore docsy github goldmark linkify netlify
 
-baseURL: https://theupdateframework.io/ # CUSTOMIZE
+baseURL: https://theupdateframework.io
 title: TUF
 disableKinds: [taxonomy]
 theme: [docsy]
