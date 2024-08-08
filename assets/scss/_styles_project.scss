@@ -1,1 +1,13 @@
 @import 'td/code-dark';
+
+
+.td-navbar {
+    .navbar-brand {
+      svg {
+        height: 38px;
+      }
+      .navbar-brand__name {
+        display: none;
+      }
+    }
+  }
