@@ -3,9 +3,6 @@
 
 .td-navbar {
     .navbar-brand {
-      @include media-breakpoint-up(md) {
-        padding: 0;
-      }
       svg {
         height: 38px;
       }
