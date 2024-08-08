@@ -63,7 +63,6 @@ imaging:
   anchor: smart
 
 params:
-  
   copyright:
     authors: >-
       Project Authors | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0)
