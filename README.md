@@ -1,6 +1,6 @@
 # The TUF website
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/5c5979e1-541a-442a-aa4f-50abbd6c0b49/deploy-status)](https://app.netlify.com/sites/tuf-homepage/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/0739ac5a-a6a8-4012-aafb-97231bcca801/deploy-status)](https://app.netlify.com/sites/tufio/deploys)
 
 Website repository for The Update Framework (TUF), build with [Hugo][] using the
 [Docsy][] theme, hosted on [Netlify][].
