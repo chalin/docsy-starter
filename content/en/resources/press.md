@@ -1,5 +1,6 @@
 ---
 title: Press
+description: TUF Press coverage
 ---
 
 * [Design2Part Magazine-April 2, 2020: Open Source Framework Helps Automakers Secure OTA Updates](https://www.d2pmagazine.com/2020/04/02/6099/)
