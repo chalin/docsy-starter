@@ -1,6 +1,6 @@
 ---
 title: Publications
-description: TUF Publications
+description:
 ---
 
 The following papers provide detailed information on securing software updater
