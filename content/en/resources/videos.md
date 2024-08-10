@@ -1,6 +1,7 @@
 ---
 title: Videos
-description: Sample videos of presentations given by project members and adopters.
+description:
+  Sample videos of presentations given by project members and adopters.
 ---
 
 ## TUF-en Up Your Signatures
@@ -26,4 +27,3 @@ description: Sample videos of presentations given by project members and adopter
 ## Atlassian Dev Den Tech Talk Series: Securing Rubygems with TUF
 
 {{< youtube "J0GkcToeDiM" >}}
-

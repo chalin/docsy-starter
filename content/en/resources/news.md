@@ -1,10 +1,7 @@
-
 ---
 title: News
 description: The [press](press) page contains a full listing of news coverage.
 ---
-
->
 
 **June 16, 2021**
 
@@ -170,5 +167,3 @@ The Docker team announces Docker Content Trust, which integrates TUF via
 available starting with Docker 1.8, and supports image signing and verification.
 For more information on the Docker + TUF integration, consult
 [this blog post](https://blog.docker.com/2015/08/content-trust-docker-1-8).
-
-
