@@ -1,7 +1,6 @@
 ---
 title: Resources
 menu: { main: { weight: 50 } }
-description:
 cascade:
   type: docs
 ---

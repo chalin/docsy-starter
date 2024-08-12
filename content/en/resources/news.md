@@ -1,7 +1,7 @@
 ---
 title: News
 description:
-  The [press](resources/press) page contains a full listing of news coverage.
+  The [press](resources/press) page contains a full listing of news coverage
 ---
 
 **June 16, 2021**
