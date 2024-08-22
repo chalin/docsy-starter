@@ -1,0 +1,19 @@
+{{ $key       := .Get 0 }}
+{{ $adoptions := index site.Data.adoptions $key }}
+<br />
+
+<div class="">
+  <div class="adoptions-container">
+    {{ range $adoptions }}
+    {{ $img    := .tag | lower }}
+    {{ $type   := .img_type | default "png" }}
+    {{ $alt    := .alt | default .tag }}
+    {{ $imgUrl := printf "img/logos/adoptions/%s_logo.%s" $img $type | relURL }}
+    <div class="adoptions-item">
+      <a href="{{ .url }}" target="_blank">
+        <img class="adoptions-logo" src="{{ $imgUrl }}" alt="{{ $alt }} logo">
+      </a>
+    </div>
+    {{ end }}
+  </div>
+</div>
