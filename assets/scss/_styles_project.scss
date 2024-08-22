@@ -28,8 +28,6 @@
   }
 }
 
-
-
 .adoptions-container {
   display: flex;
   flex-direction: row;
@@ -38,11 +36,10 @@
   margin-bottom: -3rem;
 }
 
-.adoptions-logo{
+.adoptions-logo {
   max-height: 4rem;
   max-width: 100%;
 }
-
 
 .adoptions-item {
   margin-left: auto;
@@ -51,6 +48,5 @@
   padding-right: 1.5rem;
   padding-bottom: 3rem;
 }
-   
 
 $tuf-blue: #0082ca;
