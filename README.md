@@ -1,15 +1,14 @@
-# Docsy starter for CNCF projects
+# Docsy starter for CNCF project websites
 
-## 🚧 WARNING 🚧 : this repo is under active development! Use official releases, once available
+Welcome to the CNCF Docsy Starter, an opinionated website starter for CNCF
+projects. This repo incorporates years of best practices in site configuration
+and Continuous Integration (CI) tooling, based on CNCF websites built with
+[Hugo], [Docsy], and deployed to [Netlify].
 
-Welcome to the CNCF Docsy starter, an opinionated website starter for CNCF
-projects. This repo embodies years of best practices in site configuration,
-including Continuous Integration (CI) tooling, of existing CNCF websites built
-using [Hugo], [Docsy], and deployed on [Netlify].
+[Docsy]: https://github.com/google/docsy
+[Hugo]: https://gohugo.io
+[Netlify]: https://netlify.com
 
 For a preview, see [cncf-docsy-starter.netlify.app].
 
 [cncf-docsy-starter.netlify.app]: https://cncf-docsy-starter.netlify.app/
-[Docsy]: https://github.com/google/docsy
-[Hugo]: https://gohugo.io
-[Netlify]: https://netlify.com
