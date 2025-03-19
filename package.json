@@ -1,10 +1,11 @@
 {
-  "name": "docsy-user-guide",
+  "name": "docsy-starter",
   "scripts": {
     "_build": "npm run _hugo-dev --",
     "_check:format": "npx prettier --check .",
     "_check:links--warn": "npm run _check:links || (echo; echo 'WARNING: see link-checker output for issues.'; echo)",
     "_check:links": "make --keep-going check-links",
+    "_commit:public": "HASH=$(git rev-parse --short main); cd public && git add -A && git commit -m \"Site at $HASH\"",
     "_diff:check": "git diff --name-only --exit-code",
     "_filename-error": "echo 'ERROR: the following files violate naming conventions; fix using: `npm run fix:filenames`'; echo; npm run -s _ls-bad-filenames; exit 1",
     "_filenames-to-kebab-case": "find assets content -name '*_*' ! -name '[_.]*' -exec sh -c 'mv \"$1\" \"${1//_/-}\"' _ {} \\;",
@@ -36,23 +37,22 @@
     "seq": "bash -c 'for cmd in \"$@\"; do npm run $cmd || exit 1; done' - ",
     "serve": "npm run _serve",
     "test": "npm run check:format && npm run check:links",
-    "update:dep": "npm install --save-dev autoprefixer@latest postcss-cli@latest",
     "update:pkgs": "npx npm-check-updates -u"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.20",
-    "cspell": "^8.14.2",
-    "hugo-extended": "0.133.0",
-    "postcss-cli": "^11.0.0",
-    "prettier": "^3.3.3"
+    "autoprefixer": "^10.4.21",
+    "cspell": "^8.17.5",
+    "hugo-extended": "0.145.0",
+    "postcss-cli": "^11.0.1",
+    "prettier": "^3.5.3"
   },
   "optionalDependencies": {
-    "netlify-cli": "^17.34.2",
-    "npm-check-updates": "^17.1.0"
+    "netlify-cli": "^19.0.2",
+    "npm-check-updates": "^17.1.15"
   },
   "enginesComment": "Ensure that engines.node value stays consistent with the project's .nvmrc",
   "engines": {
-    "node": "20.x"
+    "node": "22.x"
   },
   "gitHubActionCacheKey": "2024-07-02 - change this key to force cache refresh",
   "private": true,
