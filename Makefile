@@ -3,9 +3,9 @@
 HTMLTEST_DIR=tmp
 HTMLTEST?=htmltest # Specify as make arg if different
 HTMLTEST_ARGS?=--log-level 1
-LINK_CACHE_FILE?=refcache.json
-LINK_CACHE_FILE_DEST_DIR?=static
-LINK_CACHE_FILE_SRC_DIR?=$(HTMLTEST_DIR)/.htmltest
+REFCACHE_FILE?=refcache.json
+REFCACHE_DEST?=static
+REFCACHE_SRC?=$(HTMLTEST_DIR)/.htmltest
 
 # Use $(HTMLTEST) in PATH, if available; otherwise, we'll get a copy
 ifeq (, $(shell which $(HTMLTEST)))
@@ -19,19 +19,19 @@ default:
 	@echo "Make what? Target list:\n"
 	@make -rpn | grep '^[a-z]\S*:' | sed 's/://' | sort
 
-$(LINK_CACHE_FILE_SRC_DIR):
-	mkdir -p $(LINK_CACHE_FILE_SRC_DIR)
+$(REFCACHE_SRC):
+	mkdir -p $(REFCACHE_SRC)
 
-$(LINK_CACHE_FILE_DEST_DIR)/$(LINK_CACHE_FILE):
-	mkdir -p $(LINK_CACHE_FILE_DEST_DIR)
-	echo '{}' > $(LINK_CACHE_FILE_DEST_DIR)/$(LINK_CACHE_FILE)
+$(REFCACHE_DEST)/$(REFCACHE_FILE):
+	mkdir -p $(REFCACHE_DEST)
+	echo '{}' > $(REFCACHE_DEST)/$(REFCACHE_FILE)
 
-refcache-restore: $(LINK_CACHE_FILE_DEST_DIR)/$(LINK_CACHE_FILE) $(LINK_CACHE_FILE_SRC_DIR)
-	cp $(LINK_CACHE_FILE_DEST_DIR)/$(LINK_CACHE_FILE) $(LINK_CACHE_FILE_SRC_DIR)/
+refcache-restore: $(REFCACHE_DEST)/$(REFCACHE_FILE) $(REFCACHE_SRC)
+	cp $(REFCACHE_DEST)/$(REFCACHE_FILE) $(REFCACHE_SRC)/
 
 refcache-save:
-	cp $(LINK_CACHE_FILE_SRC_DIR)/$(LINK_CACHE_FILE) $(LINK_CACHE_FILE_DEST_DIR)/
-	npx prettier --prose-wrap=always --write $(LINK_CACHE_FILE_DEST_DIR)/$(LINK_CACHE_FILE)
+	cp $(REFCACHE_SRC)/$(REFCACHE_FILE) $(REFCACHE_DEST)/
+	npx prettier --prose-wrap=always --write $(REFCACHE_DEST)/$(REFCACHE_FILE)
 
 check-links: $(GET_LINK_CHECKER_IF_NEEDED) \
 	refcache-restore check-links-only refcache-save
