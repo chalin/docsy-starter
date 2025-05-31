@@ -4,6 +4,7 @@ baseURL: https://cncf-docsy-starter.netlify.app/ # CUSTOMIZE
 title: Docsy Starter # CUSTOMIZE
 disableKinds: [taxonomy]
 theme: [docsy]
+themesDir: node_modules
 enableGitInfo: true
 
 #
@@ -89,27 +90,19 @@ params:
         improve</a>.
   links: # CUSTOMIZE
     user:
-      - name: GitHub Discussions
-        url: https://github.com/google/docsy/discussions
-        icon: fa-brands fa-github
-        desc: Discussion and help from your fellow users
       - name: User mailing list
         url: https://groups.google.com/forum/#!forum/docsy-users
         icon: fa-solid fa-envelope
         desc: Sign up for Docsy announcements
-      - name: Twitter
-        url: https://twitter.com/docsydocs
-        icon: fa-brands fa-x-twitter
-        desc: Follow us on Twitter to get the latest news!
       - name: Stack Overflow
         url: https://stackoverflow.com/questions/tagged/docsy
         icon: fa-brands fa-stack-overflow
         desc: Practical questions and curated answers
     developer:
       - name: GitHub
-        url: https://github.com/google/docsy
+        url: https://github.com/chalin/docsy-starter
         icon: fa-brands fa-github
-        desc: Development takes place here!
+        desc: GitHub repository for this starter
 
 module:
   mounts:
