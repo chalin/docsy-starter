@@ -1,3 +1,4 @@
+# cSpell:ignore htmltest refcache
 # Set REFCACHE to another value to disable htmltest refcache-file manipulation
 REFCACHE?=refcache
 HTMLTEST_DIR=tmp
