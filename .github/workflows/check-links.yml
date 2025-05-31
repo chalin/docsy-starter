@@ -25,4 +25,4 @@ jobs:
 
       - run: npm install --omit=optional
 
-      - run: npm run check:links
+      - run: npm run seq -- check:links _diff:check
