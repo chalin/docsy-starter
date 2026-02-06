@@ -2,12 +2,11 @@
 title: Documentation
 linkTitle: Docs
 menu: { main: { weight: 20 } }
-spelling: cSpell:disable # REMOVE this line
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-culpa qui officia deserunt mollit anim id est laborum.
+This is placeholder content. Replace it with your own content. Use this section
+to guide readers through your product or project. Start with quickstart steps,
+link to core concepts, and point to reference material for advanced use cases.
+Keep each page focused, practical, and easy to scan so new users can find
+answers quickly while experienced users can dive deeper when they need
+specifics.

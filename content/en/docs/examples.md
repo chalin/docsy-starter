@@ -1,7 +1,7 @@
 ---
 title: Examples
 weight: 500
-description: THIS IS SAMPLE CONTENT
+description: Examples of Docsy projects
 ---
 
 One of the best ways to see what Docsy can do, and learn how to configure a site
