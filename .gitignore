@@ -8,15 +8,13 @@ node_modules/
 package-lock.json
 
 # Local scratch folder
-tmp/
+/tmp
 
 # macOS
 .DS_Store
 
-# Misc
-scripts/collector.yaml
-assets/jsconfig.json
+# Apps & services
 /.netlify
-
-# VS Code
 /.vscode
+
+# cSpell:ignore hugo

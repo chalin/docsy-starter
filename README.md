@@ -12,3 +12,5 @@ and Continuous Integration (CI) tooling, based on CNCF websites built with
 For a preview, see [cncf-docsy-starter.netlify.app].
 
 [cncf-docsy-starter.netlify.app]: https://cncf-docsy-starter.netlify.app/
+
+<!-- cSpell:ignore cncf docsy -->

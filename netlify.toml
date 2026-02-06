@@ -4,3 +4,13 @@ command = "npm run seq -- build:preview diff:check"
 
 [context.production]
 command = "npm run seq -- build:production diff:check"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Frame-Options = "SAMEORIGIN"
+    Content-Security-Policy = "frame-ancestors 'self';"
+
+# cSpell:ignore nosniff sameorigin

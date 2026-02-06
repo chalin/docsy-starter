@@ -1,8 +1,7 @@
 ---
 title: Get started
 weight: 100
-# aliases: [/docs/getting-started/]
-description: THIS IS SAMPLE CONTENT
+description: Get started with Docsy in under 5 minutes!
 ---
 
 As you saw in our introduction, Docsy is a [Hugo](https://gohugo.io) theme,

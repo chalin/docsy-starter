@@ -4,9 +4,11 @@
     "_build": "npm run _hugo-dev --",
     "_check:format": "npx prettier --check .",
     "_check:links--warn": "npm run _check:links || (echo; echo 'WARNING: see link-checker output for issues.'; echo)",
+    "_check:links:internal": "npm run _check:links -- HTMLTEST_ARGS='--skip-external'",
     "_check:links": "make --keep-going check-links",
     "_commit:public": "HASH=$(git rev-parse --short main); cd public && git add -A && git commit -m \"Site at $HASH\"",
     "_diff:check": "git diff --name-only --exit-code",
+    "_ensure:docsy-hugo-modules": "test -d node_modules/github.com || npm --prefix node_modules/docsy run postinstall",
     "_filename-error": "echo 'ERROR: the following files violate naming conventions; fix using: `npm run fix:filenames`'; echo; npm run -s _ls-bad-filenames; exit 1",
     "_filenames-to-kebab-case": "find assets content -name '*_*' ! -name '[_.]*' -exec sh -c 'mv \"$1\" \"${1//_/-}\"' _ {} \\;",
     "_hugo-dev": "npm run _hugo -- -e dev -DFE",
@@ -20,6 +22,7 @@
     "check:format": "npm run _check:format || (echo '[help] Run: npm run fix:format'; exit 1)",
     "check:links:internal": "HTMLTEST_ARGS='--skip-external' npm run _check:links",
     "check:links": "npm run _check:links",
+    "check:spelling": "npx cspell --no-progress -c .cspell.yml content data 'layouts/**/*.md'",
     "clean": "rm -Rf public/",
     "diff:check": "npm run _diff:check || (echo; echo 'WARNING: the files above have not been committed'; echo)",
     "fix:filenames": "npm run _filenames-to-kebab-case",
@@ -27,17 +30,19 @@
     "make:public": "git init public",
     "postbuild:preview": "npm run _check:links--warn",
     "postbuild:production": "npm run _check:links--warn",
+    "postinstall": "test ! -d node_modules/docsy || npm run _ensure:docsy-hugo-modules",
     "precheck:links:all": "npm run build",
     "precheck:links": "npm run build",
     "seq": "bash -c 'for cmd in \"$@\"; do npm run $cmd || exit 1; done' - ",
     "serve": "npm run _serve",
     "test": "npm run check:format && npm run check:links",
-    "update:pkgs": "npx npm-check-updates -u"
+    "update:packages": "npx npm-check-updates --dep 'prod,dev,optional,peer' -u"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.21",
     "cspell": "^9.0.2",
-    "docsy": "github:google/docsy",
+    "docsy": "google/docsy#semver:0.13.0",
+    "hugo-extended": "^0.152.2",
     "postcss-cli": "^11.0.1",
     "prettier": "^3.5.3"
   },
@@ -47,13 +52,13 @@
   },
   "enginesComment": "Ensure that engines.node value stays consistent with the project's .nvmrc",
   "engines": {
-    "node": "22.x"
+    "node": ">=24"
   },
-  "gitHubActionCacheKey": "2024-07-02 - change this key to force cache refresh",
+  "gitHubActionCacheKey": "2026-02-06 - refresh cache for Docsy 0.13.0 and Hugo 0.152.2",
   "private": true,
   "prettier": {
     "proseWrap": "always",
     "singleQuote": true
   },
-  "spelling": "cSpell:ignore docsy hugo HTMLTEST pkgs netlify precheck postbuild -"
+  "spelling": "cSpell:ignore docsy hugo HTMLTEST netlify precheck postbuild -"
 }
