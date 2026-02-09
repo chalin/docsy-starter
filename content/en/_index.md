@@ -1,42 +1,59 @@
 ---
 title: Docsy starter
-description: A website starter for technical documentation
+description: A Docsy-themed website template for technical documentation
 outputs:
   - HTML
   - REDIRECTS # Include this `content/en` ONLY
-developer_note:
-  The blocks/cover shortcode (used below) will use as a background image any
-  image file containing "background" in its name.
-show_banner: true
+params:
+  body_class: td-navbar-links-all-active
+  show_banner: true
 ---
 
-{{% blocks/cover title="Docsy Starter" image_anchor="top" height="full" %}}
+{{% blocks/cover
+  title="Welcome to Docsy Starter!"
+  height="full td-below-navbar"
+%}}
 
 <!-- prettier-ignore -->
 {{% param description %}}
 {.display-6}
 
-<a class="btn btn-lg btn-primary me-3" href="docs/">Learn More</a>
-<a class="btn btn-lg btn-secondary" href="docs/get-started/">Get started</a>
-{.p-initial .my-5}
+<!-- prettier-ignore -->
+<div class="td-cta-buttons my-5">
+  <a {{% _param btn-lg primary %}} href="docs/">
+    Learn more
+  </a>
+  <a {{% _param btn-lg secondary %}}
+    href="{{% param github_repo %}}"
+    target="_blank" rel="noopener noreferrer">
+    Get the template
+    {{% _param FA brands github "" %}}
+  </a>
+</div>
 
-{{% blocks/link-down color="info" %}} {{% /blocks/cover %}}
+{{% blocks/link-down color="info" %}}
 
-{{% blocks/lead color="primary" %}}
+{{% /blocks/cover %}}
 
-Docsy is a theme for the Hugo static site generator that's specifically designed
-for technical documentation sets. Our aim is to help you get a working
+{{% blocks/lead color="white" %}}
+
+Docsy is a theme for the [Hugo][] static site generator that's specifically
+designed for technical documentation sets. Our aim is to help you get a working
 documentation site up and running as easily as possible, so you can concentrate
 on creating great content for your users.
 
-<a href="https://www.netlify.com" target="_blank" rel="noopener">
-  <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Deploys by Netlify" />
-</a>
+[![Deploys by Netlify][netlify-badge]][netlify]
+
+[Hugo]: https://gohugo.io/
+[netlify]: https://www.netlify.com/
+[netlify-badge]:
+  https://www.netlify.com/img/global/badges/netlify-color-accent.svg
+
 {{% /blocks/lead %}}
 
-{{% blocks/section color="dark" type="row" %}}
+{{% blocks/section color="dark bg-gradient" type="row" %}}
 
-{{% blocks/feature icon="fa-lightbulb" title="See Docsy in action!" url="/docs/examples/" %}}
+{{% blocks/feature icon="fa-lightbulb" title="See Docsy in action!" url="docs/examples/" %}}
 
 As well as our example site, there's a growing number of projects using Docsy
 for their doc sites.

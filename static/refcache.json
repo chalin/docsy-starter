@@ -7,6 +7,14 @@
     "StatusCode": 206,
     "LastSeen": "2026-02-06T17:17:03.380923-05:00"
   },
+  "https://docsy.dev": {
+    "StatusCode": 206,
+    "LastSeen": "2026-02-09T14:45:58.320155-05:00"
+  },
+  "https://docsy.dev/docs/get-started/": {
+    "StatusCode": 206,
+    "LastSeen": "2026-02-09T14:45:58.167499-05:00"
+  },
   "https://git-scm.com/book/en/v2/Git-Tools-Submodules": {
     "StatusCode": 206,
     "LastSeen": "2026-02-06T17:17:04.955354-05:00"
@@ -75,6 +83,10 @@
     "StatusCode": 206,
     "LastSeen": "2026-02-06T17:17:04.060212-05:00"
   },
+  "https://gohugo.io/": {
+    "StatusCode": 206,
+    "LastSeen": "2026-02-09T05:09:16.548751-05:00"
+  },
   "https://gohugo.io/hugo-modules/": {
     "StatusCode": 206,
     "LastSeen": "2026-02-06T17:17:04.172438-05:00"
@@ -102,6 +114,10 @@
   "https://www.netlify.com": {
     "StatusCode": 206,
     "LastSeen": "2026-02-06T17:17:03.156405-05:00"
+  },
+  "https://www.netlify.com/": {
+    "StatusCode": 206,
+    "LastSeen": "2026-02-09T05:09:16.606996-05:00"
   },
   "https://www.netlify.com/img/global/badges/netlify-color-accent.svg": {
     "StatusCode": 206,

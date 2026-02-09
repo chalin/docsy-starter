@@ -69,6 +69,7 @@ params:
       Project Authors | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0)
       |
     from_year: 2024
+    to_year: present
   github_repo: https://github.com/chalin/docsy-starter
   gcs_engine_id: b11e9c44d8d004464 # CUSTOMIZE - this is the starter ID
   privacy_policy: https://www.linuxfoundation.org/legal/privacy-policy
@@ -88,6 +89,16 @@ params:
         Sorry to hear that. Please <a
         href="https://github.com/google/docsy/issues/new">tell us how we can
         improve</a>.
+  pagePlaceholderNoteBody: |
+    **This is placeholder content**. Replace it with your own content. To learn
+    more, see [Get started][] from the [Docsy][] User Guide.
+
+    [Docsy]: https://docsy.dev
+    [Get started]: https://docsy.dev/docs/get-started/
+  # Text macros: use with _param
+  btn-lg: class="btn btn-lg btn-{1}" role="button"
+  FA: <i class="fa-{1} fa-{2} text-{3} px-1"></i>
+
   links: # CUSTOMIZE
     user:
       - name: User mailing list

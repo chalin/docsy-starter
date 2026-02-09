@@ -8,7 +8,6 @@
     "_check:links": "make --keep-going check-links",
     "_commit:public": "HASH=$(git rev-parse --short main); cd public && git add -A && git commit -m \"Site at $HASH\"",
     "_diff:check": "git diff --name-only --exit-code",
-    "_ensure:docsy-hugo-modules": "test -d node_modules/github.com || npm --prefix node_modules/docsy run postinstall",
     "_filename-error": "echo 'ERROR: the following files violate naming conventions; fix using: `npm run fix:filenames`'; echo; npm run -s _ls-bad-filenames; exit 1",
     "_filenames-to-kebab-case": "find assets content -name '*_*' ! -name '[_.]*' -exec sh -c 'mv \"$1\" \"${1//_/-}\"' _ {} \\;",
     "_hugo-dev": "npm run _hugo -- -e dev -DFE",
@@ -30,19 +29,23 @@
     "make:public": "git init public",
     "postbuild:preview": "npm run _check:links--warn",
     "postbuild:production": "npm run _check:links--warn",
-    "postinstall": "test ! -d node_modules/docsy || npm run _ensure:docsy-hugo-modules",
+    "postinstall": "npm --prefix node_modules/docsy run postinstall",
     "precheck:links:all": "npm run build",
     "precheck:links": "npm run build",
+    "random:text": "node scripts/random-text.js",
     "seq": "bash -c 'for cmd in \"$@\"; do npm run $cmd || exit 1; done' - ",
     "serve": "npm run _serve",
-    "test": "npm run check:format && npm run check:links",
+    "test": "npm list docsy && npm run check:format && npm run check:links",
+    "update:docsy:local": "npm install -D file:../docsy/docsy && npm list docsy",
+    "update:docsy:main": "npm install -D google/docsy#main && npm list docsy",
+    "update:hugo": "npm install --save-exact -D hugo-extended@latest",
     "update:packages": "npx npm-check-updates --dep 'prod,dev,optional,peer' -u"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.21",
     "cspell": "^9.0.2",
-    "docsy": "google/docsy#semver:0.13.0",
-    "hugo-extended": "^0.152.2",
+    "docsy": "github:google/docsy#main",
+    "hugo-extended": "0.155.3",
     "postcss-cli": "^11.0.1",
     "prettier": "^3.5.3"
   },
@@ -54,7 +57,7 @@
   "engines": {
     "node": ">=24"
   },
-  "gitHubActionCacheKey": "2026-02-06 - refresh cache for Docsy 0.13.0 and Hugo 0.152.2",
+  "gitHubActionCacheKey": "2026-02-09 - refresh cache for Docsy and latest hugo-extended",
   "private": true,
   "prettier": {
     "proseWrap": "always",
