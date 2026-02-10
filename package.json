@@ -10,10 +10,12 @@
     "_diff:check": "git diff --name-only --exit-code",
     "_filename-error": "echo 'ERROR: the following files violate naming conventions; fix using: `npm run fix:filenames`'; echo; npm run -s _ls-bad-filenames; exit 1",
     "_filenames-to-kebab-case": "find assets content -name '*_*' ! -name '[_.]*' -exec sh -c 'mv \"$1\" \"${1//_/-}\"' _ {} \\;",
-    "_hugo-dev": "npm run _hugo -- -e dev -DFE",
+    "_hugo-dev": "npm run _hugo-npm-setup && npm run _hugo -- -e dev -DFE",
+    "_hugo-npm-setup": "npm --prefix node_modules/docsy run postinstall",
     "_hugo": "hugo --cleanDestinationDir",
     "_ls-bad-filenames": "find assets content -name '*_*' ! -name '[_.]*'",
     "_serve": "npm run _hugo-dev -- serve --minify --disableFastRender --renderToMemory",
+    "_preupdate:docsy": "echo 'INFO: forcing a full clean install of Docsy'; rm -f package-lock.json",
     "build:preview": "npm run _hugo-dev -- --minify --baseURL \"${DEPLOY_PRIME_URL:-http://localhost}\"",
     "build:production": "npm run _hugo -- --minify",
     "build": "npm run _build --",
@@ -29,22 +31,24 @@
     "make:public": "git init public",
     "postbuild:preview": "npm run _check:links--warn",
     "postbuild:production": "npm run _check:links--warn",
-    "postinstall": "npm --prefix node_modules/docsy run postinstall",
+    "postinstall": "npm run _hugo-npm-setup",
     "precheck:links:all": "npm run build",
     "precheck:links": "npm run build",
+    "preupdate:docsy": "npm run _preupdate:docsy && echo 'INFO: set DOCSY_VERSION to desired Docsy version'",
     "random:text": "node scripts/random-text.js",
     "seq": "bash -c 'for cmd in \"$@\"; do npm run $cmd || exit 1; done' - ",
     "serve": "npm run _serve",
     "test": "npm list docsy && npm run check:format && npm run check:links",
-    "update:docsy:local": "npm install -D file:../docsy/docsy && npm list docsy",
-    "update:docsy:main": "npm install -D google/docsy#main && npm list docsy",
+    "update:docsy:local": "npm run preupdate:docsy && npm install -D file:../docsy/docsy && npm list docsy",
+    "update:docsy:main": "npm run preupdate:docsy && npm install -D google/docsy#main && npm list docsy",
+    "update:docsy": "DOCSY_VERSION=${DOCSY_VERSION:-0.14.0} npm install -D google/docsy#semver:$DOCSY_VERSION && npm list docsy",
     "update:hugo": "npm install --save-exact -D hugo-extended@latest",
     "update:packages": "npx npm-check-updates --dep 'prod,dev,optional,peer' -u"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.21",
     "cspell": "^9.0.2",
-    "docsy": "github:google/docsy#main",
+    "docsy": "github:google/docsy#semver:",
     "hugo-extended": "0.155.3",
     "postcss-cli": "^11.0.1",
     "prettier": "^3.5.3"
@@ -63,5 +67,5 @@
     "proseWrap": "always",
     "singleQuote": true
   },
-  "spelling": "cSpell:ignore docsy hugo HTMLTEST netlify precheck postbuild -"
+  "spelling": "cSpell:ignore docsy hugo HTMLTEST netlify precheck postbuild preupdate -"
 }
