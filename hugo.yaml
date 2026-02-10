@@ -1,4 +1,4 @@
-# cSpell:ignore docsy github goldmark linkify netlify
+# cSpell:ignore docsy github goldmark linkify netlify hugo
 
 baseURL: https://cncf-docsy-starter.netlify.app/ # CUSTOMIZE
 title: Docsy Starter # CUSTOMIZE
@@ -81,11 +81,11 @@ params:
     sidebar_search_disable: false
     feedback: # CUSTOMIZE
       enable: false # FIXME: setting to false until the feedback can be better configured
-      'yes': >-
+      yes: >-
         Glad to hear it! Please <a
         href="https://github.com/google/docsy/issues/new">tell us how we can
         improve</a>.
-      'no': >-
+      no: >-
         Sorry to hear that. Please <a
         href="https://github.com/google/docsy/issues/new">tell us how we can
         improve</a>.
@@ -116,6 +116,8 @@ params:
         desc: GitHub repository for this starter
 
 module:
+  hugoVersion:
+    min: 0.155.3
   mounts:
     - source: content/en
       target: content
