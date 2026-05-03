@@ -23,8 +23,12 @@ outputFormats:
     notAlternative: true
 
 outputs:
-  home: [HTML]
-  section: [HTML]
+  # We define REDIRECTS here so all home outputs stay in one place (rather than
+  # overriding in each site-language index file). Netlify only processes the
+  # default-language _redirects file, the others are ignored.
+  home: [HTML, markdown, LLMS, REDIRECTS]
+  page: [HTML, markdown]
+  section: [HTML, markdown]
 
 #
 # Language settings
@@ -61,7 +65,7 @@ markup:
 imaging:
   resampleFilter: CatmullRom # cspell:disable-line
   quality: 75
-  anchor: smart
+  anchor: Smart
 
 params:
   copyright:
@@ -117,7 +121,7 @@ params:
 
 module:
   hugoVersion:
-    min: 0.155.3
+    min: 0.157.0
   mounts:
     - source: content/en
       target: content

@@ -1,4 +1,36 @@
 {
+  "https://cncf-docsy-starter.netlify.app/blog/2024/hello/index.md": {
+    "StatusCode": 206,
+    "LastSeen": "2026-05-03T05:56:11.127646-04:00"
+  },
+  "https://cncf-docsy-starter.netlify.app/blog/index.md": {
+    "StatusCode": 206,
+    "LastSeen": "2026-05-03T05:56:11.093064-04:00"
+  },
+  "https://cncf-docsy-starter.netlify.app/community/index.md": {
+    "StatusCode": 206,
+    "LastSeen": "2026-05-03T05:56:11.047208-04:00"
+  },
+  "https://cncf-docsy-starter.netlify.app/docs/examples/index.md": {
+    "StatusCode": 206,
+    "LastSeen": "2026-05-03T05:56:11.035682-04:00"
+  },
+  "https://cncf-docsy-starter.netlify.app/docs/get-started/index.md": {
+    "StatusCode": 206,
+    "LastSeen": "2026-05-03T05:56:11.090435-04:00"
+  },
+  "https://cncf-docsy-starter.netlify.app/docs/index.md": {
+    "StatusCode": 206,
+    "LastSeen": "2026-05-03T05:56:11.1427-04:00"
+  },
+  "https://cncf-docsy-starter.netlify.app/index.md": {
+    "StatusCode": 206,
+    "LastSeen": "2026-05-03T05:56:11.076561-04:00"
+  },
+  "https://cncf-docsy-starter.netlify.app/search/index.md": {
+    "StatusCode": 206,
+    "LastSeen": "2026-05-03T05:56:11.10729-04:00"
+  },
   "https://code.jquery.com/jquery-3.7.1.min.js": {
     "StatusCode": 206,
     "LastSeen": "2026-02-06T17:17:02.950108-05:00"

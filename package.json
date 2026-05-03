@@ -41,27 +41,27 @@
     "test": "npm list docsy && npm run check:format && npm run check:links",
     "update:docsy:local": "npm run preupdate:docsy && npm install -D file:../docsy/docsy && npm list docsy",
     "update:docsy:main": "VERSION=main npm run update:docsy",
-    "update:docsy": "npm install -D google/docsy#${VERSION:-semver:0.14.1} && npm list docsy",
+    "update:docsy": "npm install -D google/docsy#${VERSION:-semver:0.15.0} && npm list docsy",
     "update:hugo": "npm install --save-exact -D hugo-extended@latest",
     "update:packages": "npx npm-check-updates --dep 'prod,dev,optional,peer' -u"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.21",
-    "cspell": "^9.0.2",
-    "docsy": "github:google/docsy#semver:0.14.1",
-    "hugo-extended": "0.155.3",
+    "autoprefixer": "^10.5.0",
+    "cspell": "^10.0.0",
+    "docsy": "github:google/docsy#semver:0.15.0",
+    "hugo-extended": "0.157.0",
     "postcss-cli": "^11.0.1",
-    "prettier": "^3.5.3"
+    "prettier": "^3.8.3"
   },
   "optionalDependencies": {
-    "netlify-cli": "^21.5.0",
-    "npm-check-updates": "^18.0.1"
+    "netlify-cli": "^26.0.0",
+    "npm-check-updates": "^22.1.0"
   },
   "enginesComment": "Ensure that engines.node value stays consistent with the project's .nvmrc",
   "engines": {
     "node": ">=24"
   },
-  "gitHubActionCacheKey": "2026-02-09 - refresh cache for Docsy and latest hugo-extended",
+  "gitHubActionCacheKey": "2026-05-03 - refresh cache for Docsy 0.15.0 and Hugo 0.157.0",
   "private": true,
   "prettier": {
     "proseWrap": "always",

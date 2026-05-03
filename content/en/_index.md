@@ -1,9 +1,6 @@
 ---
 title: Docsy starter
 description: A Docsy-themed website template for technical documentation
-outputs:
-  - HTML
-  - REDIRECTS # Include this `content/en` ONLY
 params:
   body_class: td-navbar-links-all-active
   show_banner: true
