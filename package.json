@@ -48,8 +48,8 @@
   "devDependencies": {
     "autoprefixer": "^10.5.0",
     "cspell": "^10.0.0",
-    "docsy": "github:google/docsy#semver:0.15.0",
-    "hugo-extended": "0.157.0",
+    "docsy": "file:../../../../docsy/docsy.worktrees/docsy-v0160-release-prep-139c91b8",
+    "hugo-extended": "0.164.0",
     "postcss-cli": "^11.0.1",
     "prettier": "^3.8.3"
   },
@@ -67,5 +67,8 @@
     "proseWrap": "always",
     "singleQuote": true
   },
-  "spelling": "cSpell:ignore docsy hugo HTMLTEST netlify precheck postbuild preupdate -"
+  "spelling": "cSpell:ignore docsy hugo HTMLTEST netlify precheck postbuild preupdate -",
+  "allowScripts": {
+    "file:../../../../../docsy/docsy.worktrees/docsy-v0160-release-prep-139c91b8": true
+  }
 }
