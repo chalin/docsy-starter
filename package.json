@@ -10,8 +10,7 @@
     "_diff:check": "git diff --name-only --exit-code",
     "_filename-error": "echo 'ERROR: the following files violate naming conventions; fix using: `npm run fix:filenames`'; echo; npm run -s _ls-bad-filenames; exit 1",
     "_filenames-to-kebab-case": "find assets content -name '*_*' ! -name '[_.]*' -exec sh -c 'mv \"$1\" \"${1//_/-}\"' _ {} \\;",
-    "_hugo-dev": "npm run _hugo-npm-setup && npm run _hugo -- -e dev -DFE",
-    "_hugo-npm-setup": "npm --prefix node_modules/docsy run postinstall",
+    "_hugo-dev": "npm run _hugo -- -e dev -DFE",
     "_hugo": "hugo --cleanDestinationDir",
     "_ls-bad-filenames": "find assets content -name '*_*' ! -name '[_.]*'",
     "_serve": "npm run _hugo-dev -- serve --minify --disableFastRender --renderToMemory",
@@ -31,26 +30,22 @@
     "make:public": "git init public",
     "postbuild:preview": "npm run _check:links--warn",
     "postbuild:production": "npm run _check:links--warn",
-    "postinstall": "npm run _hugo-npm-setup",
     "precheck:links:all": "npm run build",
     "precheck:links": "npm run build",
     "preupdate:docsy": "npm run _preupdate:docsy && echo 'INFO: set VERSION to desired Docsy version'",
     "random:text": "node scripts/random-text.js",
     "seq": "bash -c 'for cmd in \"$@\"; do npm run $cmd || exit 1; done' - ",
     "serve": "npm run _serve",
-    "test": "npm list docsy && npm run check:format && npm run check:links",
-    "update:docsy:local": "npm run preupdate:docsy && npm install -D file:../docsy/docsy && npm list docsy",
-    "update:docsy:main": "VERSION=main npm run update:docsy",
-    "update:docsy": "npm install -D google/docsy#${VERSION:-semver:0.15.0} && npm list docsy",
+    "test": "npm list @docsy/theme && npm run check:format && npm run check:links",
+    "update:docsy:local": "npm run preupdate:docsy && npm install -D file:../docsy/docsy/theme && npm list @docsy/theme",
+    "update:docsy": "npm install -D @docsy/theme@${VERSION:-latest} && npm list @docsy/theme",
     "update:hugo": "npm install --save-exact -D hugo-extended@latest",
     "update:packages": "npx npm-check-updates --dep 'prod,dev,optional,peer' -u"
   },
   "devDependencies": {
-    "autoprefixer": "^10.5.0",
+    "@docsy/theme": "^0.16.0",
     "cspell": "^10.0.0",
-    "docsy": "file:../../../../docsy/docsy.worktrees/docsy-v0160-release-prep-139c91b8",
     "hugo-extended": "0.164.0",
-    "postcss-cli": "^11.0.1",
     "prettier": "^3.8.3"
   },
   "optionalDependencies": {
@@ -61,14 +56,11 @@
   "engines": {
     "node": ">=24"
   },
-  "gitHubActionCacheKey": "2026-05-03 - refresh cache for Docsy 0.15.0 and Hugo 0.157.0",
+  "gitHubActionCacheKey": "2026-07-29 - refresh cache for Docsy 0.16.0 and Hugo 0.164.0",
   "private": true,
   "prettier": {
     "proseWrap": "always",
     "singleQuote": true
   },
-  "spelling": "cSpell:ignore docsy hugo HTMLTEST netlify precheck postbuild preupdate -",
-  "allowScripts": {
-    "file:../../../../../docsy/docsy.worktrees/docsy-v0160-release-prep-139c91b8": true
-  }
+  "spelling": "cSpell:ignore docsy hugo HTMLTEST netlify precheck postbuild preupdate -"
 }
