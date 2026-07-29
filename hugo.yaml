@@ -3,7 +3,7 @@
 baseURL: https://cncf-docsy-starter.netlify.app/ # CUSTOMIZE
 title: Docsy Starter # CUSTOMIZE
 disableKinds: [taxonomy]
-theme: [docsy]
+theme: ['@docsy/theme']
 themesDir: node_modules
 enableGitInfo: true
 
@@ -39,8 +39,8 @@ defaultContentLanguage: en
 
 languages:
   en:
-    languageName: English
-    languageCode: en-US
+    label: English
+    locale: en-US
     params:
       description: Docsy starter # CUSTOMIZE
 
@@ -121,7 +121,7 @@ params:
 
 module:
   hugoVersion:
-    min: 0.157.0
+    min: 0.160.1
   mounts:
     - source: content/en
       target: content
