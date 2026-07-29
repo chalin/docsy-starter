@@ -39,8 +39,8 @@ defaultContentLanguage: en
 
 languages:
   en:
-    languageName: English
-    languageCode: en-US
+    label: English
+    locale: en-US
     params:
       description: Docsy starter # CUSTOMIZE
 
