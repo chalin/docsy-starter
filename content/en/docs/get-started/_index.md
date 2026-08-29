@@ -45,7 +45,7 @@ Docsy.
 
 If you have an existing site that uses Docsy as a Git submodule, and you would
 like to update it to use Hugo Modules, follow our
-[migration guide](https://www.docsy.dev//docs/updating/convert-site-to-module/).
+[migration guide](https://www.docsy.dev/docs/updating/convert-site-to-module/).
 If you're not ready to migrate yet, don't worry! Your site will continue to work
 as usual.
 
