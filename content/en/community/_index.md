@@ -7,5 +7,4 @@ contributingUrl: https://github.com/cncf/foundation/blob/main/code-of-conduct.md
 # Content below, if any, will be added to the community page.
 ---
 
-TEMP red-first proof:
-[broken link](https://github.com/chalin/docsy-starter/no-such-page-404).
+TEMP red-first proof 2: [valid uncached](https://www.rust-lang.org/).
