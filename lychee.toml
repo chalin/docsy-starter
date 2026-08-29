@@ -17,6 +17,7 @@ exclude = [
   '/index\.xml$',                               # rel=alternate RSS links
   '^https?://localhost\b',
   '^https?://github\.com/.*?/.*?/(new|edit)/',  # Docsy view/edit-source links
+  '^https://github\.com/chalin/docsy-starter/commit/',      # per-page provenance links (hash changes each commit)
   '^https://github\.com/chalin/docsy-starter/issues/new\?', # per-page issue links
   # Sites that deny access, always yielding 401, 403, 406, 999, or other:
   '^https://(www\.)?linkedin\.com\b',
