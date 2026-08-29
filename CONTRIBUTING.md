@@ -25,7 +25,7 @@ information on using pull requests.
 ## Development
 
 - Requirements: Node and npm per `engines` in [package.json](package.json), and
-  bash -- npm scripts run under `script-shell=bash`; on Windows, use Git Bash.
+  bash (npm scripts run under `script-shell=bash`; on Windows, use Git Bash).
   Link checking (`npm run check:links`, also part of `npm test`) needs the
   [lychee][] binary on your `PATH`; CI installs a pinned version.
 - Install dependencies with `npm run install:safe`: a lock-exact, script-free
@@ -33,7 +33,7 @@ information on using pull requests.
   (via `allowScripts`) to run its install script.
 - To update Hugo, run `npm run update:hugo` (script-free bump to the version
   Docsy tested against the installed theme), review the new [hugo-extended][]
-  release, then run `npm run approve:hugo` -- script-enabled installs fail until
+  release, then run `npm run approve:hugo`; script-enabled installs fail until
   the new version is approved.
 
 [hugo-extended]: https://www.npmjs.com/package/hugo-extended
