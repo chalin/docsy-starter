@@ -40,7 +40,7 @@
     "test": "npm list @docsy/theme && npm run check:format && npm run test:repo && npm run check:links",
     "update:docsy:local": "npm install -D file:../docsy/docsy/theme && npm list @docsy/theme",
     "update:docsy": "echo 'INFO: set VERSION to desired Docsy version' && npm install -D @docsy/theme@${VERSION:-latest} && npm list @docsy/theme",
-    "update:hugo": "npm install --save-exact -D hugo-extended@latest && npm approve-scripts --allow-scripts-pin hugo-extended && npm run _rebuild:hugo",
+    "update:hugo": "node scripts/update-hugo.mjs",
     "update:packages": "npm exec --no -- npm-check-updates --dep 'prod,dev,optional,peer' -x hugo-extended -u"
   },
   "devDependencies": {
