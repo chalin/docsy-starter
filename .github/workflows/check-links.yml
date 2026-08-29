@@ -22,4 +22,15 @@ jobs:
 
       - run: npm run install:safe
 
-      - run: npm run seq -- check:links _diff:check
+      - name: Install lychee
+        env:
+          LYCHEE_VERSION: v0.24.2
+        run: |
+          tmp="$(mktemp -d)"
+          curl -sfL "https://github.com/lycheeverse/lychee/releases/download/lychee-${LYCHEE_VERSION}/lychee-x86_64-unknown-linux-gnu.tar.gz" \
+            | tar -xz -C "$tmp"
+          install -D "$(find "$tmp" -type f -name lychee | head -n1)" "$HOME/.local/bin/lychee"
+
+      - env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: npm run seq -- check:links _diff:check

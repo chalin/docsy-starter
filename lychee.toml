@@ -1,0 +1,26 @@
+# Lychee link-checker config; run via `npm run check:links`. Ported from
+# `.htmltest.yml` following the docsy.dev setup (google/docsy#2665).
+
+cache = true
+max_cache_age = "375d"        # ~ .htmltest.yml CacheExpires: 9000h
+no_progress = true
+extensions = ["html"]         # built HTML only
+include_fragments = "full"    # htmltest anchor checking
+index_files = ["index.html"]  # resolve Hugo pretty-URL dir links to index.html
+
+# .htmltest.yml IgnoreDirs.
+exclude_path = ['blog/(\d+/)?page/\d+']
+
+# .htmltest.yml IgnoreURLs.
+exclude = [
+  '[?&]link-check=no',                          # opt-out query param
+  '/index\.xml$',                               # rel=alternate RSS links
+  '^https?://localhost\b',
+  '^https?://github\.com/.*?/.*?/(new|edit)/',  # Docsy view/edit-source links
+  '^https://github\.com/chalin/docsy-starter/issues/new\?', # per-page issue links
+  # Sites that deny access, always yielding 401, 403, 406, 999, or other:
+  '^https://(www\.)?linkedin\.com\b',
+  '^https://(x|twitter)\.com',
+  '^https://stackoverflow\.com/questions/tagged/',    # bot-wall (403)
+  '^https://groups\.google\.com/forum/#',             # #! is a client route, not an anchor
+]
