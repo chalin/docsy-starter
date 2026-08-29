@@ -1,4 +1,4 @@
-name: Repo
+name: test
 
 on:
   merge_group:

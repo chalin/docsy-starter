@@ -33,7 +33,6 @@
     "is:clean": "bash -c 'o=$(git status --porcelain -uall); echo \"$o\"; [ -z \"$o\" ]'",
     "_netlify:prepare": "npm run -s is:clean && npm run install:safe && npm run -s is:clean",
     "make:public": "git init public",
-    "random:text": "node scripts/random-text.js",
     "seq": "bash -c 'for cmd in \"$@\"; do npm run $cmd || exit 1; done' - ",
     "serve": "npm run _serve",
     "test:repo": "node --test 'tests/*.test.mjs'",
