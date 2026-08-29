@@ -29,6 +29,7 @@
     "diff:check": "npm run _diff:check || (echo; echo 'WARNING: the files above have not been committed'; echo)",
     "fix:filenames": "npm run _filenames-to-kebab-case",
     "fix:format": "npm run _check:format -- --write",
+    "fix:link-cache": "npm run check:links",
     "install:safe": "npm ci --ignore-scripts --no-audit --no-fund && npm run _rebuild:hugo",
     "is:clean": "bash -c 'o=$(git status --porcelain -uall) || exit 1; echo \"$o\"; [ -z \"$o\" ]'",
     "make:public": "git init public",
