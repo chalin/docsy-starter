@@ -1,0 +1,30 @@
+# Lychee link-checker config; run via `npm run check:links`. Ported from
+# `.htmltest.yml` following the docsy.dev setup (google/docsy#2665).
+
+cache = true
+max_cache_age = "375d"        # ~ .htmltest.yml CacheExpires: 9000h
+no_progress = true
+extensions = ["html"]         # built HTML only
+include_fragments = "full"    # htmltest anchor checking
+include_verbatim = true       # check <script src> etc. (htmltest did)
+index_files = ["index.html"]  # resolve Hugo pretty-URL dir links to index.html
+
+# .htmltest.yml IgnoreDirs. Anchored on /public/: lychee matches input paths
+# as given, and lychee-norm-cache passes public/ absolute; unanchored, the
+# pattern would also skip nested lookalikes (docs/blog/page/…).
+exclude_path = ['/public/blog/(\d+/)?page/\d+']
+
+# .htmltest.yml IgnoreURLs.
+exclude = [
+  '[?&]link-check=no([&#]|$)',                  # opt-out query param
+  '^https?://localhost\b',
+  '^https?://github\.com/[^/]+/[^/]+/(new|edit)/',  # Docsy view/edit-source links
+  '^https://cse\.google\.com/cse\.js',          # engine id is env-dependent; empty (400) in dev builds
+  '^https://github\.com/chalin/docsy-starter/commit/',      # per-page provenance links (hash changes each commit)
+  '^https://github\.com/chalin/docsy-starter/issues/new\?', # per-page issue links
+  # Sites that deny access, always yielding 401, 403, 406, 999, or other:
+  '^https://(www\.)?linkedin\.com\b',
+  '^https://(x|twitter)\.com',
+  '^https://stackoverflow\.com/questions/tagged/',    # bot-wall (403)
+  '^https://groups\.google\.com/forum/#',             # #! is a client route, not an anchor
+]
