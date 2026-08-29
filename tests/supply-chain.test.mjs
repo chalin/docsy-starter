@@ -18,19 +18,24 @@ test('locked install-script packages match the reviewed inventory', () => {
     .map(([key]) => key);
   assert.deepEqual(
     withInstallScript,
-    ['node_modules/hugo-extended'],
+    // @parcel/watcher is lock-only: an optional dep of the pure-JS sass
+    // fallback that sass-embedded ships for platforms without a prebuilt
+    // binary (none we run), so it never installs; denied for defense in
+    // depth should the tree ever change.
+    ['node_modules/@parcel/watcher', 'node_modules/hugo-extended'],
     'locked install-script packages match the reviewed inventory',
   );
 });
 
 test('allowScripts covers exactly the locked install-script packages', () => {
-  // Version-pinned so a bump's new (unreviewed) script fails npm ci under
-  // strict-allow-scripts; approve:hugo refreshes the pin.
+  // The allow entry is version-pinned so a bump's new (unreviewed) script
+  // fails npm ci under strict-allow-scripts; approve:hugo refreshes the pin.
+  // The deny entry is unversioned: the answer is false for every version.
   const { version } =
     readJSON('package-lock.json').packages['node_modules/hugo-extended'];
   assert.deepEqual(
     readJSON('package.json').allowScripts,
-    { [`hugo-extended@${version}`]: true },
+    { [`hugo-extended@${version}`]: true, '@parcel/watcher': false },
     'allowScripts covers exactly the locked install-script packages',
   );
 });

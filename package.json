@@ -48,7 +48,8 @@
     "cspell": "^10.0.0",
     "hugo-extended": "0.164.0",
     "link-cache": "^0.3.0",
-    "prettier": "^3.8.3"
+    "prettier": "^3.8.3",
+    "sass-embedded": "1.102.0"
   },
   "optionalDependencies": {
     "npm-check-updates": "23.0.2"
@@ -59,7 +60,8 @@
     "npm": ">=11.18.0"
   },
   "allowScripts": {
-    "hugo-extended@0.164.0": true
+    "hugo-extended@0.164.0": true,
+    "@parcel/watcher": false
   },
   "overrides": {
     "adm-zip": "^0.6.0"
