@@ -31,6 +31,9 @@ jobs:
             | tar -xz -C "$tmp"
           install -D "$(find "$tmp" -type f -name lychee | head -n1)" "$HOME/.local/bin/lychee"
 
+      - name: Lychee sanity canaries (offline)
+        run: npm run test:lychee
+
       - env:
           GITHUB_TOKEN: ${{ github.token }}
         run: npm run seq -- check:links _diff:check

@@ -26,6 +26,8 @@ information on using pull requests.
 
 - Requirements: Node and npm per `engines` in [package.json](package.json), and
   bash -- npm scripts run under `script-shell=bash`; on Windows, use Git Bash.
+  Link checking (`npm run check:links`, also part of `npm test`) needs the
+  [lychee][] binary on your `PATH`; CI installs a pinned version.
 - Install dependencies with `npm run install:safe`: a lock-exact, script-free
   install that then rebuilds [hugo-extended][], the only dependency approved
   (via `allowScripts`) to run its install script.
@@ -35,6 +37,7 @@ information on using pull requests.
   the new version is approved.
 
 [hugo-extended]: https://www.npmjs.com/package/hugo-extended
+[lychee]: https://github.com/lycheeverse/lychee#installation
 
 ## Community Guidelines
 
