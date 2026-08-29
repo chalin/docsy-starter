@@ -5,6 +5,8 @@ on:
   pull_request:
   push: { branches: [main] }
 
+permissions: { contents: read }
+
 jobs:
   build-and-check-links:
     name: BUILD and CHECK LINKS
