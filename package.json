@@ -8,6 +8,7 @@
     "_check:links": "make --keep-going check-links",
     "_commit:public": "HASH=$(git rev-parse --short main); cd public && git add -A && git commit --allow-empty -m \"Site at $HASH\"",
     "_diff:check": "git diff --name-only --exit-code",
+    "_docsy-hugo-version": "node scripts/docsy-hugo-version.mjs",
     "_filename-error": "echo 'ERROR: the following files violate naming conventions; fix using: `npm run fix:filenames`'; echo; npm run -s _ls-bad-filenames; exit 1",
     "_filenames-to-kebab-case": "find assets content -name '*_*' ! -name '[_.]*' -exec sh -c 'mv \"$1\" \"${1//_/-}\"' _ {} \\;",
     "_hugo-dev": "npm run _hugo -- -e dev -DFE",
@@ -39,7 +40,7 @@
     "test": "npm list @docsy/theme && npm run check:format && npm run test:repo && npm run check:links",
     "update:docsy:local": "npm install -D file:../docsy/docsy/theme && npm list @docsy/theme",
     "update:docsy": "echo 'INFO: set VERSION to desired Docsy version' && npm install -D @docsy/theme@${VERSION:-latest} && npm list @docsy/theme",
-    "update:hugo": "node scripts/update-hugo.mjs",
+    "update:hugo": "VERSION=${VERSION:-$(npm run -s _docsy-hugo-version)} && npm install --save-exact --ignore-scripts -D hugo-extended@${VERSION:?} && npm approve-scripts --allow-scripts-pin hugo-extended && npm run _rebuild:hugo",
     "update:packages": "npm exec --no -- npm-check-updates --dep 'prod,dev,optional,peer' -x hugo-extended -u"
   },
   "devDependencies": {
