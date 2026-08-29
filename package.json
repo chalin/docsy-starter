@@ -34,7 +34,7 @@
     "fix:filenames": "npm run _filenames-to-kebab-case",
     "fix:format": "npm run _check:format -- --write",
     "install:safe": "npm ci --ignore-scripts --no-audit --no-fund && npm run _rebuild:hugo",
-    "is:clean": "bash -c 'o=$(git status --porcelain -uall); echo \"$o\"; [ -z \"$o\" ]'",
+    "is:clean": "bash -c 'o=$(git status --porcelain -uall) || exit 1; echo \"$o\"; [ -z \"$o\" ]'",
     "make:public": "git init public",
     "seq": "bash -c 'for cmd in \"$@\"; do npm run $cmd || exit 1; done' - ",
     "serve": "npm run _serve",
