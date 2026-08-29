@@ -1,0 +1,24 @@
+{
+  $schema: 'https://docs.renovatebot.com/renovate-schema.json',
+  extends: ['config:best-practices'],
+  // The preset's 3-day npm packageRules entry would silently override the
+  // top-level minimumReleaseAge below.
+  ignorePresets: ['security:minimumReleaseAgeNpm'],
+  lockFileMaintenance: { enabled: false },
+  schedule: ['* * * * 0'], // Sunday (UTC)
+  labels: ['dependencies'],
+  minimumReleaseAge: '7 days',
+  packageRules: [
+    {
+      // Updated deliberately: update:hugo keeps the allowScripts pin in sync.
+      matchPackageNames: ['hugo-extended'],
+      enabled: false,
+    },
+    {
+      // Updated deliberately via update:docsy, following the release's
+      // upgrade guide.
+      matchPackageNames: ['@docsy/theme'],
+      enabled: false,
+    },
+  ],
+}

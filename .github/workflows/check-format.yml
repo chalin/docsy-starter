@@ -5,30 +5,30 @@ on:
   pull_request:
   push: { branches: [main] }
 
+permissions: { contents: read }
+
 jobs:
   check-filenames:
     name: FILENAME check
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with: { persist-credentials: false }
       - run: npm run check:filenames
 
   check-formatting:
     name: FILE FORMAT
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with: { persist-credentials: false }
 
-      - name: Create NPM cache-hash input file
-        run: |
-          mkdir -p tmp
-          jq '{devDependencies, engines, gitHubActionCacheKey}' package.json > tmp/package-ci.json
-
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
           node-version-file: .nvmrc
           cache: npm
-          cache-dependency-path: tmp/package-ci.json
+
+      - run: npm run install:safe
 
       - name: Check file format
-        run: npm run check:format --ignore-scripts
+        run: npm run check:format

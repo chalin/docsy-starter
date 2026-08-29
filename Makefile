@@ -31,7 +31,7 @@ refcache-restore: $(REFCACHE_DEST)/$(REFCACHE_FILE) $(REFCACHE_SRC)
 
 refcache-save:
 	cp $(REFCACHE_SRC)/$(REFCACHE_FILE) $(REFCACHE_DEST)/
-	npx prettier --prose-wrap=always --write $(REFCACHE_DEST)/$(REFCACHE_FILE)
+	node_modules/.bin/prettier --prose-wrap=always --write $(REFCACHE_DEST)/$(REFCACHE_FILE)
 
 check-links: $(GET_LINK_CHECKER_IF_NEEDED) \
 	refcache-restore check-links-only refcache-save
