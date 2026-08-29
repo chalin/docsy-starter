@@ -1,7 +1,6 @@
 {
   "name": "docsy-starter",
   "scripts": {
-    "_approve+rebuild:hugo": "npm approve-scripts --allow-scripts-pin hugo-extended && npm run _rebuild:hugo",
     "_build": "npm run _hugo-dev --",
     "_build:preview": "npm run _hugo-dev -- --minify --baseURL \"${DEPLOY_PRIME_URL:-http://localhost}\"",
     "_build:production": "npm run _hugo -- --minify",
@@ -21,6 +20,7 @@
     "_netlify:prepare": "npm run -s is:clean && npm run install:safe && npm run -s is:clean",
     "_rebuild:hugo": "npm rebuild hugo-extended --ignore-scripts=false",
     "_serve": "npm run _hugo-dev -- serve --minify --disableFastRender --renderToMemory",
+    "approve:hugo": "npm approve-scripts --allow-scripts-pin hugo-extended && npm run test:repo && npm run _rebuild:hugo",
     "build": "npm run _build --",
     "build:preview": "npm run _build:preview && npm run _check:links--warn",
     "build:production": "npm run _build:production && npm run _check:links--warn",
@@ -42,8 +42,8 @@
     "test:repo": "node --test 'tests/*.test.mjs'",
     "update:docsy": "echo 'INFO: set VERSION to desired Docsy version' && npm install -D @docsy/theme@${VERSION:-latest} && npm list @docsy/theme",
     "update:docsy:local": "npm install -D file:../docsy/docsy/theme && npm list @docsy/theme",
-    "update:hugo": "VERSION=${VERSION:-$(npm run -s _docsy-hugo-version)} npm run _install:hugo && npm run _approve+rebuild:hugo",
-    "update:packages": "npm exec --no -- npm-check-updates --dep 'prod,dev,optional,peer' -x hugo-extended -u"
+    "update:hugo": "VERSION=${VERSION:-$(npm run -s _docsy-hugo-version)} npm run _install:hugo && echo 'INFO: review the hugo-extended release, then run: npm run approve:hugo'",
+    "update:packages": "npm exec --no -- npm-check-updates --dep 'prod,dev,optional,peer' -x hugo-extended -x @docsy/theme -u"
   },
   "devDependencies": {
     "@docsy/theme": "^0.16.0",
