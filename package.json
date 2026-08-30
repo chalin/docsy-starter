@@ -46,11 +46,11 @@
     "update:packages": "npm exec --no -- npm-check-updates --dep 'prod,dev,optional,peer' -x hugo-extended -x @docsy/theme -u"
   },
   "devDependencies": {
-    "cspell": "^10.0.0",
+    "cspell": "10.0.1",
     "docsy": "github:google/docsy#semver:0.17.0",
     "hugo-extended": "0.164.0",
-    "link-cache": "^0.3.0",
-    "prettier": "^3.8.3",
+    "link-cache": "0.3.0",
+    "prettier": "3.9.6",
     "sass-embedded": "1.102.0"
   },
   "optionalDependencies": {
