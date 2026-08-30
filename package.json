@@ -46,7 +46,7 @@
   },
   "devDependencies": {
     "cspell": "^10.0.0",
-    "docsy": "github:google/docsy#45b042a568e4121dd048a140eb8b1592b5deb75b",
+    "docsy": "github:google/docsy#semver:0.17.0",
     "hugo-extended": "0.164.0",
     "link-cache": "^0.3.0",
     "prettier": "^3.8.3",
