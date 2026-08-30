@@ -12,6 +12,8 @@
     "_hugo": "hugo --cleanDestinationDir",
     "_hugo-dev": "npm run _hugo -- -e dev -DFE",
     "_install:hugo": "npm install --save-exact --ignore-scripts -D hugo-extended@${VERSION:-VERSION_UNSET}",
+    "_install:theme-deps": "npm run --prefix node_modules/docsy install:theme-deps",
+    "_list:theme": "npm list @docsy/theme || npm list docsy",
     "_ls-bad-filenames": "find assets content -name '*_*' ! -name '[_.]*'",
     "_netlify:prepare": "npm run -s is:clean && npm run install:safe && npm run -s is:clean",
     "_rebuild:hugo": "npm rebuild hugo-extended --ignore-scripts=false",
@@ -30,13 +32,13 @@
     "fix:filenames": "npm run _filenames-to-kebab-case",
     "fix:format": "npm run _check:format -- --write",
     "fix:link-cache": "npm run check:links",
-    "install:safe": "npm ci --ignore-scripts --no-audit --no-fund && npm run _rebuild:hugo",
+    "install:safe": "npm ci --ignore-scripts --no-audit --no-fund && npm run _rebuild:hugo && npm run _install:theme-deps",
     "is:clean": "bash -c 'o=$(git status --porcelain -uall) || exit 1; echo \"$o\"; [ -z \"$o\" ]'",
     "make:public": "git init public",
     "refcache": "refcache",
     "seq": "bash -c 'for cmd in \"$@\"; do npm run $cmd || exit 1; done' - ",
     "serve": "npm run _serve",
-    "test": "npm list @docsy/theme && npm run check:format && npm run test:repo && npm run check:links",
+    "test": "npm run -s _list:theme && npm run check:format && npm run test:repo && npm run check:links",
     "test:repo": "node --test 'tests/*.test.mjs'",
     "update:docsy": "echo 'INFO: set VERSION to desired Docsy version' && npm install -D @docsy/theme@${VERSION:-latest} && npm list @docsy/theme",
     "update:docsy:local": "npm install -D file:../docsy/docsy/theme && npm list @docsy/theme",
@@ -44,11 +46,12 @@
     "update:packages": "npm exec --no -- npm-check-updates --dep 'prod,dev,optional,peer' -x hugo-extended -x @docsy/theme -u"
   },
   "devDependencies": {
-    "@docsy/theme": "^0.16.0",
     "cspell": "^10.0.0",
+    "docsy": "github:google/docsy#semver:0.17.0",
     "hugo-extended": "0.164.0",
     "link-cache": "^0.3.0",
-    "prettier": "^3.8.3"
+    "prettier": "^3.8.3",
+    "sass-embedded": "1.102.0"
   },
   "optionalDependencies": {
     "npm-check-updates": "23.0.2"
@@ -59,7 +62,8 @@
     "npm": ">=11.18.0"
   },
   "allowScripts": {
-    "hugo-extended@0.164.0": true
+    "hugo-extended@0.164.0": true,
+    "@parcel/watcher": false
   },
   "overrides": {
     "adm-zip": "^0.6.0"
