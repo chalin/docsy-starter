@@ -1,3 +1,0 @@
-# Union-merge the link cache: one entry per line; duplicate lines from a
-# merge are benign (the next lychee-norm-cache run dedupes, newest entry wins).
-link-cache.jsonc merge=union
