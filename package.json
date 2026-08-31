@@ -50,7 +50,7 @@
     "cspell": "^10.0.0",
     "docsy": "github:google/docsy#semver:0.17.0",
     "hugo-extended": "0.164.0",
-    "link-cache": "github:chalin/link-cache#9b083aefdc55f608b85e13163003be8fb2e3e77d",
+    "link-cache": "github:chalin/link-cache#c9dd094017775f6108c1643f9e395f408ac4f274",
     "prettier": "^3.8.3",
     "sass-embedded": "1.102.0"
   },
