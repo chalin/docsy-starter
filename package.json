@@ -12,7 +12,6 @@
     "_hugo": "hugo --cleanDestinationDir",
     "_hugo-dev": "npm run _hugo -- -e dev -DFE",
     "_install:hugo": "npm install --save-exact --ignore-scripts -D hugo-extended@${VERSION:-VERSION_UNSET}",
-    "_install:theme-deps": "npm run --prefix node_modules/docsy install:theme-deps",
     "_list:theme": "npm list @docsy/theme || npm list docsy",
     "_ls-bad-filenames": "find assets content -name '*_*' ! -name '[_.]*'",
     "_netlify:prepare": "npm run -s is:clean && npm run install:safe && npm run -s is:clean",
@@ -32,7 +31,7 @@
     "fix:filenames": "npm run _filenames-to-kebab-case",
     "fix:format": "npm run _check:format -- --write",
     "fix:link-cache": "npm run check:links",
-    "install:safe": "npm ci --ignore-scripts --no-audit --no-fund && npm run _rebuild:hugo && npm run _install:theme-deps",
+    "install:safe": "npm ci --ignore-scripts --no-audit --no-fund && npm run _rebuild:hugo",
     "is:clean": "bash -c 'o=$(git status --porcelain -uall) || exit 1; echo \"$o\"; [ -z \"$o\" ]'",
     "link-cache": "link-cache",
     "make:public": "git init public",
@@ -47,8 +46,8 @@
     "update:packages": "npm exec --no -- npm-check-updates --dep 'prod,dev,optional,peer' -x hugo-extended -x @docsy/theme -u"
   },
   "devDependencies": {
+    "@docsy/theme": "^0.17.0",
     "cspell": "^10.0.0",
-    "docsy": "github:google/docsy#semver:0.17.0",
     "hugo-extended": "0.164.0",
     "link-cache": "^0.4.0",
     "prettier": "^3.8.3",
