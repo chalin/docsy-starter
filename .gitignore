@@ -17,3 +17,6 @@ node_modules/
 /.vscode
 
 # cSpell:ignore hugo
+
+# Lychee link-check cache: derived from link-cache.jsonc by lychee-norm-cache
+.lycheecache
