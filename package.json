@@ -47,7 +47,7 @@
   },
   "devDependencies": {
     "@docsy/theme": "^0.17.0",
-    "cspell": "^10.0.0",
+    "cspell": "^10.0.1",
     "hugo-extended": "0.164.0",
     "link-cache": "^0.4.0",
     "prettier": "^3.8.3",
