@@ -2,10 +2,9 @@
 # `.htmltest.yml` following the docsy.dev setup (google/docsy#2665).
 
 cache = true
-# ~ .htmltest.yml CacheExpires: 9000h. Since link-cache 0.5.0, default runs
-# project committed-cache entries as fresh, so this expiry governs only
-# lychee-native cache entries; committed-entry staleness checking is opt-in
-# (lychee-norm-cache --check-stale).
+# ~ .htmltest.yml CacheExpires: 9000h. Inert in default runs since link-cache
+# 0.5.0: the owned cache is projected fresh into .lycheecache each run, so this
+# expiry applies only under `lychee-norm-cache --check-stale`.
 max_cache_age = "375d"
 no_progress = true
 extensions = ["html"]         # built HTML only
