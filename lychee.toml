@@ -2,7 +2,11 @@
 # `.htmltest.yml` following the docsy.dev setup (google/docsy#2665).
 
 cache = true
-max_cache_age = "375d"        # ~ .htmltest.yml CacheExpires: 9000h
+# ~ .htmltest.yml CacheExpires: 9000h. Since link-cache 0.5.0, default runs
+# project committed-cache entries as fresh, so this expiry governs only
+# lychee-native cache entries; committed-entry staleness checking is opt-in
+# (lychee-norm-cache --check-stale).
+max_cache_age = "375d"
 no_progress = true
 extensions = ["html"]         # built HTML only
 include_fragments = "full"    # htmltest anchor checking
