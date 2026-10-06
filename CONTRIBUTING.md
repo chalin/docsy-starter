@@ -42,10 +42,9 @@ For the link cache (the committed `link-cache.jsonc`, its fields, and the
 refresh, prune, and seed recipes), see Docsy's [Link checking and the link
 cache][]. What differs here:
 
-- The cache and `lychee.toml` are at the repo root, and `npm run check:links`
-  runs the check.
-- CI (`.github/workflows/check-links.yml`) runs the same check and fails when it
-  changes the cache without a commit.
+- The cache and `lychee.toml` are at the repo root.
+- CI (`.github/workflows/check-links.yml`) runs the check and fails if it leaves
+  the cache changed: commit the updated `link-cache.jsonc` with your change.
 - No refresh workflow: a lapsed seed [keeps serving][link-cache's one rule]
   until you prune by hand. Run `npm run link-cache -- -p 0` (drops only lapsed
   entries; `-p N` also drops the N oldest without `expires`), then
