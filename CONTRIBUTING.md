@@ -43,17 +43,20 @@ refresh, prune, and seed recipes), see Docsy's [Link checking and the link
 cache][]. What differs here:
 
 - The cache and `lychee.toml` are at the repo root, and `npm run check:links`
-  runs the check (in CI, `.github/workflows/check-links.yml`, which also fails
-  when the check changes the cache without a commit).
-- No refresh workflow: a lapsed seed keeps serving until you prune by hand. Run
-  `npm run link-cache -- -p 0` (drops only lapsed entries; `-p N` also drops the
-  N oldest without `expires`), then `npm run fix:link-cache` to re-verify those
-  URLs, and commit the cache.
+  runs the check.
+- CI (`.github/workflows/check-links.yml`) runs the same check and fails when it
+  changes the cache without a commit.
+- No refresh workflow: a lapsed seed [keeps serving][link-cache's one rule]
+  until you prune by hand. Run `npm run link-cache -- -p 0` (drops only lapsed
+  entries; `-p N` also drops the N oldest without `expires`), then
+  `npm run fix:link-cache` to re-verify those URLs, and commit the cache.
 
+<!-- prettier-ignore-start -->
 [hugo-extended]: https://www.npmjs.com/package/hugo-extended
-[Link checking and the link cache]:
-  https://main--docsydocs.netlify.app/project/about/maintainer-notes/#link-checking-and-the-link-cache
+[Link checking and the link cache]: https://main--docsydocs.netlify.app/project/about/maintainer-notes/#link-checking-and-the-link-cache
+[link-cache's one rule]: https://github.com/chalin/link-cache/blob/main/docs/operating-model.md#one-rule
 [lychee]: https://github.com/lycheeverse/lychee#installation
+<!-- prettier-ignore-end -->
 
 ## Community Guidelines
 
