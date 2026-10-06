@@ -66,7 +66,7 @@
     "@parcel/watcher": false
   },
   "overrides": {
-    "adm-zip": "^0.6.0"
+    "adm-zip": "^0.6.1"
   },
   "private": true,
   "prettier": {
