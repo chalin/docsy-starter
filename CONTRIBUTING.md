@@ -36,7 +36,23 @@ information on using pull requests.
   release, then run `npm run approve:hugo`; script-enabled installs fail until
   the new version is approved.
 
+### Link checking
+
+For the link cache (the committed `link-cache.jsonc`, its fields, and the
+refresh, prune, and seed recipes), see Docsy's [Link checking and the link
+cache][]. What differs here:
+
+- The cache and `lychee.toml` are at the repo root, and `npm run check:links`
+  runs the check (in CI, `.github/workflows/check-links.yml`, which also fails
+  when the check changes the cache without a commit).
+- No refresh workflow: a lapsed seed keeps serving until you prune by hand. Run
+  `npm run link-cache -- -p 0` (drops only lapsed entries; `-p N` also drops the
+  N oldest without `expires`), then `npm run fix:link-cache` to re-verify those
+  URLs, and commit the cache.
+
 [hugo-extended]: https://www.npmjs.com/package/hugo-extended
+[Link checking and the link cache]:
+  https://main--docsydocs.netlify.app/project/about/maintainer-notes/#link-checking-and-the-link-cache
 [lychee]: https://github.com/lycheeverse/lychee#installation
 
 ## Community Guidelines
