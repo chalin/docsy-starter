@@ -1,5 +1,4 @@
 cache = true
-# Expiry applies only under `lychee-norm-cache --check-stale`.
 max_cache_age = "365d"
 no_progress = true
 extensions = ["html"]
