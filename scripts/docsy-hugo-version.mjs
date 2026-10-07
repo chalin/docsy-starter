@@ -34,7 +34,7 @@ if (!STABLE_SEMVER.test(theme)) {
 }
 
 for (const manifestPath of ['package.json', 'docsy.dev/package.json']) {
-  const url = `https://raw.githubusercontent.com/google/docsy/v${theme}/${manifestPath}`;
+  const url = `https://raw.githubusercontent.com/docsy/docsy/v${theme}/${manifestPath}`;
   const res = await fetch(url);
   if (!res.ok) continue;
   const pin = (await res.json()).devDependencies?.['hugo-extended'];
