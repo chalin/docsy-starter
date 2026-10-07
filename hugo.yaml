@@ -64,8 +64,6 @@ markup:
 
 imaging:
   resampleFilter: CatmullRom # cspell:disable-line
-  jpeg: { quality: 75 }
-  webp: { quality: 75 }
   anchor: Smart
 
 params:
