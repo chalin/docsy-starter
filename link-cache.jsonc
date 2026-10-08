@@ -104,19 +104,19 @@
     "when": "2026-08-29T20:06:38Z",
     "via": "lychee",
   },
-  "https://github.com/google/docsy": {
+  "https://github.com/docsy/docsy": {
     "result": 200,
-    "when": "2026-08-29T20:06:38Z",
+    "when": "2026-10-08T03:18:37Z",
     "via": "lychee",
   },
-  "https://github.com/google/docsy-example": {
+  "https://github.com/docsy/docsy-example": {
     "result": 200,
-    "when": "2026-08-29T20:06:38Z",
+    "when": "2026-10-08T03:18:37Z",
     "via": "lychee",
   },
-  "https://github.com/google/docsy/pulls": {
+  "https://github.com/docsy/docsy/pulls": {
     "result": 200,
-    "when": "2026-08-29T20:06:39Z",
+    "when": "2026-10-08T03:18:37Z",
     "via": "lychee",
   },
   "https://gohugo.io/": {

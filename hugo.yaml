@@ -3,7 +3,7 @@
 baseURL: https://cncf-docsy-starter.netlify.app/ # CUSTOMIZE
 title: Docsy Starter # CUSTOMIZE
 disableKinds: [taxonomy]
-theme: docsy/theme # TEMP: GitHub package pre-0.18.0-publish; restore ['@docsy/theme'] at the registry flip
+theme: ['@docsy/theme']
 themesDir: node_modules
 enableGitInfo: true
 
@@ -86,11 +86,11 @@ params:
       enable: false # FIXME: setting to false until the feedback can be better configured
       yes: >-
         Glad to hear it! Please <a
-        href="https://github.com/google/docsy/issues/new">tell us how we can
+        href="https://github.com/docsy/docsy/issues/new">tell us how we can
         improve</a>.
       no: >-
         Sorry to hear that. Please <a
-        href="https://github.com/google/docsy/issues/new">tell us how we can
+        href="https://github.com/docsy/docsy/issues/new">tell us how we can
         improve</a>.
   pagePlaceholderNoteBody: |
     **This is placeholder content**. Replace it with your own content. To learn
