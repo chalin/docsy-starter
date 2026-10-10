@@ -50,7 +50,7 @@
     "cspell": "10.1.1",
     "hugo-extended": "0.166.0",
     "link-cache": "0.6.0",
-    "prettier": "3.9.6",
+    "prettier": "3.9.9",
     "sass-embedded": "1.105.0"
   },
   "optionalDependencies": {
