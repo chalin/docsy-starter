@@ -31,7 +31,8 @@
     "fix:filenames": "npm run _filenames-to-kebab-case",
     "fix:format": "npm run _check:format -- --write",
     "fix:link-cache": "npm run check:links --",
-    "install:safe": "npm ci --ignore-scripts --no-audit --no-fund && npm run _rebuild:hugo",
+    "_install:theme-deps": "npm run --prefix node_modules/docsy install:theme-deps",
+    "install:safe": "npm ci --ignore-scripts --no-audit --no-fund && npm run _rebuild:hugo && npm run _install:theme-deps",
     "is:clean": "bash -c 'o=$(git status --porcelain -uall) || exit 1; echo \"$o\"; [ -z \"$o\" ]'",
     "link-cache": "link-cache",
     "make:public": "git init public",
@@ -46,8 +47,8 @@
     "update:packages": "npm exec --no -- npm-check-updates --dep 'prod,dev,optional,peer' -x hugo-extended -x @docsy/theme -u"
   },
   "devDependencies": {
-    "@docsy/theme": "0.18.0",
     "cspell": "10.4.0",
+    "docsy": "github:docsy/docsy#8731c214727c8345dcff9c3ac36892119f3457fa",
     "hugo-extended": "0.166.0",
     "link-cache": "0.6.0",
     "prettier": "3.9.10",
