@@ -40,7 +40,7 @@
     "serve": "npm run _serve",
     "test": "npm run -s _list:theme && npm run check:format && npm run test:repo && npm run check:links",
     "test:repo": "node --test 'tests/*.test.mjs'",
-    "update:docsy": "echo 'INFO: set VERSION to desired Docsy version' && npm install -D @docsy/theme@${VERSION:-latest} && npm list @docsy/theme",
+    "update:docsy": "npm install --save-exact -D @docsy/theme@${VERSION:?set VERSION to the Docsy release to install} && npm list @docsy/theme",
     "update:docsy:local": "npm install -D file:../docsy/docsy/theme && npm list @docsy/theme",
     "update:hugo": "VERSION=${VERSION:-$(npm run -s _docsy-hugo-version)} npm run _install:hugo && echo 'INFO: review the hugo-extended release, then run: npm run approve:hugo'",
     "update:packages": "npm exec --no -- npm-check-updates --dep 'prod,dev,optional,peer' -x hugo-extended -x @docsy/theme -u"
