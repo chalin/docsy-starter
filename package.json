@@ -46,7 +46,7 @@
     "update:packages": "npm exec --no -- npm-check-updates --dep 'prod,dev,optional,peer' -x hugo-extended -x @docsy/theme -u"
   },
   "devDependencies": {
-    "@docsy/theme": "0.18.0",
+    "@docsy/theme": "0.18.1",
     "cspell": "10.4.0",
     "hugo-extended": "0.166.0",
     "link-cache": "0.6.0",
